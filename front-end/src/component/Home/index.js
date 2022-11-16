@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Cinemas from "../Component/Cinemas";
 import Member from "../Component/Member";
 import Movie from "../Component/Movie";
@@ -8,22 +8,22 @@ import Schedule from "../Component/Schedule";
 import Footer from "../homepage/footer/footer";
 import Nav from "../Nav";
 export default function Home() {
-  return (
-    <>
-      <Router>
-        <Route path="/" component={Nav} />
-        <Route path="/price" component={Price} />
-        <Route path="/schedule" component={Schedule} />
-        <Route path="/movie" component={Movie} />
-        <Route path="/cinemas" component={Cinemas} />
-        <Route path="/menber" component={Member} />
-        {/* <Route path="/" exact component={Welcome} />
+    return (
+        <>
+            <Router>
+                <Route path="/" component={Nav} />
+                <Route path="/price" component={Price} />
+                <Route path="/schedule" component={Schedule} />
+                <Route path="/movie" component={Movie} />
+                <Route path="/cinemas" component={Cinemas} />
+                <Route path="/menber" component={Member} />
+                {/* <Route path="/" exact component={Welcome} />
         <Route path="/login" exact component={DangNhap} />
         <Route path="/registration" exact component={Registration} /> */}
 
-        {/* cho admin */}
+                {/* cho admin */}
 
-        {/* <Route path="/nav/admin/home" exact component={Homepage} />
+                {/* <Route path="/nav/admin/home" exact component={Homepage} />
         <Route path="/nav/admin/bangsp" exact component={BangSp} />
         <Route path="/nav/admin/dktiemchung" exact component={DKTiemChung} />
         <Route path="/nav/admin/chart1" exact component={Chart1} />
@@ -31,8 +31,8 @@ export default function Home() {
         <Route path="/nav/admin/chart2" exact component={Chart2} />
         <Route path="/nav/admin/peopledata" exact component={PeopleData} /> */}
 
-        {/* cho nhân viên */}
-        {/* <Route path="/nav/staff" component={NavForStaff} />
+                {/* cho nhân viên */}
+                {/* <Route path="/nav/staff" component={NavForStaff} />
         <Route path="/nav/staff/home" component={HomepageChoNhanVien} />
         <Route path="/nav/staff/data-product-staff" component={SanPhamChoNhanVien} />
         <Route path="/nav/staff/data-customer" component={ThongTinKhachHangChoNhanVien} />
@@ -41,8 +41,8 @@ export default function Home() {
         <Route path="/nav/staff/data-vaccination" component={DuLieuTiemChung} />
         <Route path="/nav/staff/receipt" component={HoaDon} /> */}
 
-        {/* cho khách hàng */}
-        {/* <Route path="/nav/customer" component={NavForCustomer} />
+                {/* cho khách hàng */}
+                {/* <Route path="/nav/customer" component={NavForCustomer} />
         <Route path="/nav/customer/home" component={HomepageChoKhachHang} />
         <Route
           path="/nav/customer/data-product-customer"
@@ -51,8 +51,8 @@ export default function Home() {
         />
         <Route path="/nav/customer/data-customer" component={ThongTinKhachHang} />
         <Route path="/nav/customer/dang-ki-tiem-chung" component={DangKiTiemChung} /> */}
-      </Router>
-      <Footer />
-    </>
-  );
+            </Router>
+            <Footer />
+        </>
+    );
 }

@@ -1,5 +1,4 @@
-import React from "react";
 import { WrapperStyled } from "./styled";
 export default function Price() {
-  return <WrapperStyled>Price</WrapperStyled>;
+    return <WrapperStyled>Price</WrapperStyled>;
 }

@@ -2,8 +2,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "./footer.scss";
-import Phone from "../../../asset/images/phone.png";
-import logoBeta from "../../../asset/images/logoBeta.png";
+import Phone from "../../asset/images/phone.png";
+import logoBeta from "../../asset/images/logoBeta.png";
 
 const footer = () => {
     return (

@@ -1,17 +1,20 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Cinemas from "../Component/Cinemas";
-import Member from "../Component/Member";
-import Movie from "../Component/Movie";
-import Price from "../Component/Price";
-import Schedule from "../Component/Schedule";
-import Footer from "../homepage/footer/footer";
-import Nav from "../Nav";
+import Cinemas from "../pages/Cinemas";
+import Member from "../pages/Member";
+import Movie from "../pages/Movie";
+import Price from "../pages/Price";
+import Schedule from "../pages/Schedule";
+import Footer from "../layout/footer/footer";
+import Nav from "../layout/Nav";
+import HomePage from "../pages/homepage/Homepage";
 export default function Home() {
     return (
         <>
             <Router>
                 <Route path="/" component={Nav} />
+                {/* <Route path="/" component={HomePage} /> */}
+                <Route path="/home" component={HomePage} />
                 <Route path="/price" component={Price} />
                 <Route path="/schedule" component={Schedule} />
                 <Route path="/movie" component={Movie} />

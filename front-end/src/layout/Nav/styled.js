@@ -1,16 +1,12 @@
 import styled from "styled-components";
 
 export const WrapperStyled = styled.div`
-    nav {
+    .main-header {
         display: flex;
         background: #fff;
-        color: white;
         height: 70px;
-        box-shadow: 0 1px 3px #ddd;
-    }
-    .main-header {
-        position: fixed;
-        width: 100%;
+        justify-content: center;
+        box-shadow: 0 1px 1px #ddd;
     }
 
     .nav-logo {
@@ -21,8 +17,8 @@ export const WrapperStyled = styled.div`
     }
 
     .nav-contain {
-        width: 80%;
         display: flex;
+        width: 1150px;
     }
 
     .nav-content {

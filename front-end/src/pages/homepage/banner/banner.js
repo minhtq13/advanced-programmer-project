@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "./banner.css";
 const banner = () => {
@@ -40,7 +41,7 @@ const banner = () => {
                         data-wow-delay="0.5s"
                         data-wow-duration="1500ms"
                     >
-                        <img src="/image/counter.png" class="" />
+                        <img src="/image/counter.png" class="" alt="" />
                     </div>
                 </div>
             </div>

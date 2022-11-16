@@ -1,8 +1,8 @@
 import "./App.css";
-import Home from "./component/Home";
+import AppRouters from "./config/appRouter";
 
 function App() {
-    return <Home />;
+    return <AppRouters />;
 }
 
 export default App;

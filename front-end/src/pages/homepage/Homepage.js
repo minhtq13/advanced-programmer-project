@@ -5,7 +5,7 @@ import Banner from "./banner/banner";
 import Benefit from "./benefit/benefit";
 import Feature from "./feature/feature";
 import Promotion from "./promotion/promotion";
-import Footer from "./footer/footer";
+// import Footer from "./footer/footer";
 
 export default function Homepage() {
     return (
@@ -15,7 +15,7 @@ export default function Homepage() {
             <Benefit />
             <Feature />
             <Promotion />
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 }

@@ -1,0 +1,15 @@
+.promotion {
+    padding: 45px 0;
+    text-align: center;
+}
+.promotion h2 {
+    margin-bottom: 40px;
+}
+.cl-red {
+    color: #f02937 !important;
+}
+.box-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

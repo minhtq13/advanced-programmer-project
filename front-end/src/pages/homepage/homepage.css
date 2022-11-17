@@ -9,7 +9,11 @@ html{
     line-height: 1.4rem;
     font-family: 'Open Sans', sans-serif;
 }
-.header{
+.home-page {
+    padding-top: 70px;
+    /* padding-bottom: 70px; */
+}
+/* .header{
     position: fixed;
     top: 0;
     left: 0;
@@ -126,4 +130,4 @@ html{
 .active{
     background-color: rgba(255, 248, 248, 0.8);
 }
-
+ */

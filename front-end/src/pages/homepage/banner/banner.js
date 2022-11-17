@@ -41,7 +41,7 @@ const banner = () => {
                         data-wow-delay="0.5s"
                         data-wow-duration="1500ms"
                     >
-                        <img src="/image/counter.png" class="" alt="" />
+                        {/* <img src="/image/counter.png" class="" alt="" /> */}
                     </div>
                 </div>
             </div>

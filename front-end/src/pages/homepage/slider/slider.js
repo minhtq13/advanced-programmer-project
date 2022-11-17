@@ -57,7 +57,7 @@ const slider = () => {
                                 </a>
                             </div>
                             <div className="box-img">
-                                <img src="/image/bg-02.png" alt="" />
+                                {/* <img src="/image/bg-02.png" alt="" /> */}
                             </div>
                         </div>
                     </div>
@@ -70,8 +70,8 @@ const slider = () => {
                                     data-wow-duration="1500ms"
                                     title="Quản lý hiệu quả và chuỗi phòng tiêm"
                                 >
-                                    Quản lý{" "}
-                                    <span className="cl-blue">hiệu quả</span>{" "}
+                                    Quản lý
+                                    <span className="cl-blue">hiệu quả</span>
                                     Lịch tiêm của Khách Hàng
                                 </h2>
                                 <p
@@ -98,7 +98,7 @@ const slider = () => {
                                 </a>
                             </div>
                             <div className="box-img">
-                                <img src="/image/Slider-2.png" alt="" />
+                                {/* <img src="/image/Slider-2.png" alt="" /> */}
                             </div>
                         </div>
                     </div>

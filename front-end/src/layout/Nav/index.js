@@ -8,9 +8,12 @@ export default function Nav() {
             <div className="wrapper-header">
                 <nav className="main-header">
                     <div className="nav-contain">
-                        <div className="logo-beta" style={{}}>
-                            <img src={logoBeta} alt="" />
-                        </div>
+                        <Link to="/home">
+                            <div className="logo-beta" style={{}}>
+                                <img src={logoBeta} alt="" />
+                            </div>
+                        </Link>
+
                         <div className="nav-content">
                             <Link to="/home" exact className="nav-links">
                                 Trang chủ

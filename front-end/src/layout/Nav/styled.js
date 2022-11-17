@@ -7,6 +7,11 @@ export const WrapperStyled = styled.div`
         height: 70px;
         justify-content: center;
         box-shadow: 0 1px 1px #ddd;
+        position: fixed;
+        top: 0;
+        overflow: hidden;
+        width: 100%;
+        z-index: 100;
     }
 
     .nav-logo {
@@ -29,6 +34,12 @@ export const WrapperStyled = styled.div`
     .nav-links {
         display: block;
         text-decoration-line: none;
+        font-size: 18px;
+        color: #000;
+        font-weight: 600;
+    }
+    .nav-links:hover {
+        color: #337ab7;
     }
 
     .search-box {

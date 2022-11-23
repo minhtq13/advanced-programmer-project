@@ -8,6 +8,7 @@ const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 
 export default function Movie() {
     const [menuItems, setMenuItems] = useState(items);
+    // eslint-disable-next-line no-unused-vars
     const [categories, setCategories] = useState(allCategories);
 
     const filterItems = (category) => {

@@ -1,17 +1,11 @@
-*{
-    box-sizing: inherit;
-    padding: 0;
-    margin: 0;
-}
-html{
-    box-sizing: border-box;
-    font-size: 62.5%;
-    line-height: 1.4rem;
-    font-family: 'Open Sans', sans-serif;
-}
+
 .home-page {
-    padding-top: 70px;
+    padding-top: 75px;
     /* padding-bottom: 70px; */
+}
+.box-item-img {
+    width: 100%;
+    height: 556px;
 }
 /* .header{
     position: fixed;

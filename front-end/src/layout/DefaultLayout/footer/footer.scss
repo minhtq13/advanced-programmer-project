@@ -3,6 +3,7 @@
     background-color: #fff;
     border-top: 2px solid #ccc;
     padding: 60px 50px;
+
     .animated {
         animation-duration: 1s;
         animation-fill-mode: both;
@@ -54,20 +55,35 @@
         margin-bottom: 30px;
         width: 30%;
     }
+    .column-options {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
 
     .footer-item {
-        margin-top: 10px;
+        margin: 4px 6px;
         font-size: 14px;
         font-weight: 400;
         line-height: 16px;
         color: #000;
-        margin-bottom: 12px;
         list-style-type: none;
         cursor: pointer;
         text-align: left;
         font-weight: 500;
         font-family: sans-serif;
+        .icon-and-title {
+            display: flex;
+            align-items: center;
+            .icon {
+                margin-right: 10px;
+                svg {
+                    font-size: 20px;
+                }
+            }
+        }
     }
+
     .footer-item:hover {
         color: #337ab7;
     }

@@ -1,14 +1,15 @@
 import Nav from "./Nav";
 import Footer from "./footer/footer";
+import "./DefaultLayout.scss";
 
 function DefaultLayout({ children }) {
-  return (
-    <div>
-      <Nav />
-      <div className="container">{children}</div>
-      <Footer />
-    </div>
-  );
+    return (
+        <div className="wrapper1">
+            <Nav />
+            <div className="container-content">{children}</div>
+            <Footer />
+        </div>
+    );
 }
 
 export default DefaultLayout;

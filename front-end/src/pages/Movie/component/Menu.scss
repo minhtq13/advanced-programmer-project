@@ -1,64 +1,69 @@
 .wrapper-movie-item {
-  display: flex;
-  flex-wrap: wrap;
-  .movie-item {
-    height: 625px;
-    width: 287px;
-    img {
-      width: 227.5px;
-      height: 360px;
-      border-radius: 12px;
-    }
-    .info-movie {
-      .detail {
-        display: flex;
-        h3 {
-          font-weight: 600;
-          font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    .movie-item {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 625px;
+        width: 287px;
+        img {
+            width: 227.5px;
+            height: 360px;
+            border-radius: 12px;
         }
-        div {
-          margin-left: 4px;
+        .info-movie {
+            .detail {
+                margin-left: 30px;
+                display: flex;
+                .options {
+                    font-weight: 600;
+                    font-size: 16px;
+                }
+                div {
+                    margin-left: 4px;
+                }
+            }
+            .title-movie {
+                font-size: 18px;
+                font-weight: 600;
+                color: #337ab7;
+                cursor: pointer;
+                margin: 12px 0;
+            }
         }
-      }
-      .title-movie {
-        font-size: 18px;
-        font-weight: 600;
-        color: #337ab7;
-        cursor: pointer;
-        margin: 12px 0;
-      }
-    }
-    .buy-ticket {
-      margin-top: 12px;
-      .button-buy-ticket {
-        border: none;
-        outline: none;
-        background-image: linear-gradient(
-          to right,
-          #0a64a7 0%,
-          #258dcf 51%,
-          #3db1f3 100%
-        ) !important;
-        color: #fff;
-        width: 227.5px;
-        height: 36px;
-        cursor: pointer;
-        border-radius: 6px;
+        .buy-ticket {
+            margin-top: 12px;
+            .button-buy-ticket {
+                border: none;
+                outline: none;
+                background-image: linear-gradient(
+                    to right,
+                    #0a64a7 0%,
+                    #258dcf 51%,
+                    #3db1f3 100%
+                ) !important;
+                color: #fff;
+                width: 227.5px;
+                height: 36px;
+                cursor: pointer;
+                border-radius: 6px;
 
-        font-weight: 600;
-        span {
-          font-size: 16px;
+                font-weight: 600;
+                span {
+                    font-size: 16px;
+                }
+            }
+            .button-buy-ticket:hover {
+                background-image: linear-gradient(
+                    to right,
+                    #0a64a7 0%,
+                    #258dcf 51%,
+                    #3db1f3 100%
+                ) !important;
+                background-position: right center;
+            }
         }
-      }
-      .button-buy-ticket:hover {
-        background-image: linear-gradient(
-          to right,
-          #0a64a7 0%,
-          #258dcf 51%,
-          #3db1f3 100%
-        ) !important;
-        background-position: right center;
-      }
     }
-  }
 }

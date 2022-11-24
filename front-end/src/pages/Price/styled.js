@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const WrapperStyled = styled.div`
     .wrapper-price {
-        padding: 120px 50px 50px;
         display: flex;
         justify-content: center;
+        // padding-bottom: 50px;
     }
     .header-price {
         height: 100px;

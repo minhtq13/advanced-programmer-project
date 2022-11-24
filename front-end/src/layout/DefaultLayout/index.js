@@ -4,9 +4,10 @@ import "./DefaultLayout.scss";
 
 function DefaultLayout({ children }) {
     return (
-        <div className="wrapper1">
+        <div className="wrapper-default-layout">
             <Nav />
             <div className="container-content">{children}</div>
+            <div className="line-footer"></div>
             <Footer />
         </div>
     );

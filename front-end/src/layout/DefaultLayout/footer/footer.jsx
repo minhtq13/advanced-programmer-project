@@ -12,7 +12,7 @@ const footer = () => {
     return (
         <div>
             <div>
-                <footer className="footer" style={{ marginTop: "60px" }}>
+                <footer className="footer">
                     <div className="grid" style={{ width: "1150px" }}>
                         <div className="grid__row">
                             <div className="grid__column-footer">
@@ -67,9 +67,12 @@ const footer = () => {
                                 <div className="footer__heading">THEO DÕI</div>
                                 <div className="line1"></div>
                                 <ul className="footer-list">
-                                    {dataColumn3.map((data) => {
+                                    {dataColumn3.map((data, index) => {
                                         return (
-                                            <li className="footer-item">
+                                            <li
+                                                className="footer-item"
+                                                key={index}
+                                            >
                                                 <div className="icon-and-title">
                                                     <div className="icon">
                                                         {data.icon}

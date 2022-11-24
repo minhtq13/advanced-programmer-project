@@ -1,6 +1,6 @@
 import React from "react";
 import Movie from "../Movie";
-import "./homepage.css";
+import "./Home.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -23,7 +23,7 @@ export default function Homepage() {
         <div className="home-page">
             <div className="banner1">
                 <div id="promotion" class="promotion">
-                    <div className="container-test col-16">
+                    <div className="container1">
                         <Slider {...settings}>
                             <div className="promotion-box">
                                 <div class="promotion__review-box">

@@ -6,18 +6,17 @@ export const WrapperStyled = styled.div`
         box-shadow: 0 1px 1px #ddd;
         display: flex;
         justify-content: center;
-        background: #fff;
+        width: 100%;
         position: fixed;
         top: 0;
+        left: 0;
         overflow: hidden;
-        width: 100%;
-        z-index: 100;
+        z-index: 10;
+        background-color: #fff;
     }
     .main-header {
-        // background: #fff;
         height: 100%;
         width: 1150px;
-        box-shadow: 0 1px 1px #ddd;
     }
 
     .nav-logo {

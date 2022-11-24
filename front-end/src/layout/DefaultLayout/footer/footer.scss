@@ -1,27 +1,15 @@
 .footer {
     font-family: sans-serif;
     background-color: #fff;
-    border-top: 2px solid #ccc;
-    padding: 60px 50px;
+    margin-top: 50px;
+    padding: 0px 50px 50px 60px;
 
     .animated {
         animation-duration: 1s;
         animation-fill-mode: both;
     }
-    .row {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        margin-right: -15px;
-        margin-left: -15px;
-    }
-    @media (min-width: 992px) {
-        .col-lg-4 {
-            -ms-flex: 0 0 33.333333%;
-            flex: 0 0 33.333333%;
-            max-width: 33.333333%;
-        }
+    .grid {
+        width: 1150px;
     }
 
     /* footer */

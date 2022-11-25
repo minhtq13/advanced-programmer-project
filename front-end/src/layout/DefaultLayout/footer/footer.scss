@@ -1,229 +1,229 @@
 .footer {
+  font-family: sans-serif;
+  // background-color: #fff;
+  margin-top: 50px;
+  padding: 0px 50px 50px 60px;
+
+  .animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  .grid {
+    width: 1150px;
+  }
+
+  /* footer */
+
+  .footer__heading {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 30px;
+    color: #000;
+    margin-top: 15px;
+    font-size: 20px;
+  }
+  .line {
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(to right, #39adf0 0%, #075fa3 100%);
+    border-image-slice: 1;
+    margin-bottom: 30px;
+    width: 45%;
+  }
+  .line1 {
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(to right, #39adf0 0%, #075fa3 100%);
+    border-image-slice: 1;
+    margin-bottom: 30px;
+    width: 50%;
+  }
+  .line2 {
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(to right, #39adf0 0%, #075fa3 100%);
+    border-image-slice: 1;
+    margin-bottom: 30px;
+    width: 30%;
+  }
+  .column-options {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-item {
+    margin: 4px 6px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #000;
+    list-style-type: none;
+    cursor: pointer;
+    text-align: left;
+    font-weight: 500;
     font-family: sans-serif;
+    .icon-and-title {
+      display: flex;
+      align-items: center;
+      .icon {
+        margin-right: 10px;
+        svg {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .footer-item:hover {
+    color: #337ab7;
+  }
+
+  .footer-list {
+    padding-left: 0px;
+  }
+
+  .footer-item__link {
+    text-decoration: none;
+    color: #000;
+  }
+  .footer-item__icon {
+    padding-right: 10px;
+  }
+  .grid__column-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+  }
+  .grid__column-2-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+  }
+  .grid__column-footer {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 25%;
+  }
+
+  .grid__column-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3333%;
+  }
+  /* Responsive */
+  .grid {
+    width: 1490px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .grid__full-with {
+    width: 100%;
+  }
+
+  .grid__row {
+    display: flex;
+    /* flex-wrap: wrap; */
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  .grid__row-10 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  .footer__call {
+    position: fixed;
+    bottom: 20px;
+    right: 120px;
+  }
+  .wrapper-phone {
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    border: 1px solid #ccc;
+    bottom: 25px;
+    left: 5px;
+    border-radius: 30px;
     background-color: #fff;
-    margin-top: 50px;
-    padding: 0px 50px 50px 60px;
-
-    .animated {
-        animation-duration: 1s;
-        animation-fill-mode: both;
+    z-index: -1;
+  }
+  .hotline-phone {
+    visibility: visible;
+    background-color: transparent;
+    width: 110px;
+    height: 110px;
+    cursor: pointer;
+    z-index: 11;
+    transition: visibility 0.5s;
+  }
+  /* 00b7e0 */
+  .hotline-phone-circle {
+    position: relative;
+    top: 31px;
+    left: 31px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .hotline-phone-circle > span > img {
+    margin-top: 6px;
+    margin-left: 1px;
+  }
+  .hotline-rung {
+    width: 33px;
+    height: 33px;
+    animation: rung 1s infinite ease-in-out;
+  }
+  .hotline-bar {
+    position: absolute;
+    background-color: white;
+    height: 45px;
+    white-space: nowrap;
+    line-height: 40px;
+    padding: 0 10px;
+    background-size: 100%;
+    cursor: pointer;
+    transition: all 0.8s;
+    z-index: 9;
+    border-radius: 50px;
+    left: 45px;
+    bottom: 3px;
+  }
+  .text-hotline {
+    color: #00b7e0;
+    font-size: 16px;
+    font-weight: bold;
+    text-indent: 32px;
+    letter-spacing: 1px;
+    line-height: 45px;
+  }
+  @keyframes rung {
+    0% {
+      transform: rotate(0) scale(1) skew(1deg);
     }
-    .grid {
-        width: 1150px;
+    10% {
+      transform: rotate(-25deg) scale(1) skew(1deg);
     }
-
-    /* footer */
-
-    .footer__heading {
-        font-weight: 700;
-        font-size: 2.4rem;
-        line-height: 30px;
-        color: #000;
-        margin-top: 15px;
-        font-size: 20px;
+    20% {
+      transform: rotate(25deg) scale(1) skew(1deg);
     }
-    .line {
-        border-bottom: 4px solid transparent;
-        border-image: linear-gradient(to right, #39adf0 0%, #075fa3 100%);
-        border-image-slice: 1;
-        margin-bottom: 30px;
-        width: 45%;
+    30% {
+      transform: rotate(-25deg) scale(1) skew(1deg);
     }
-    .line1 {
-        border-bottom: 4px solid transparent;
-        border-image: linear-gradient(to right, #39adf0 0%, #075fa3 100%);
-        border-image-slice: 1;
-        margin-bottom: 30px;
-        width: 50%;
+    40% {
+      transform: rotate(25deg) scale(1) skew(1deg);
     }
-    .line2 {
-        border-bottom: 4px solid transparent;
-        border-image: linear-gradient(to right, #39adf0 0%, #075fa3 100%);
-        border-image-slice: 1;
-        margin-bottom: 30px;
-        width: 30%;
+    50% {
+      transform: rotate(0) scale(1) skew(1deg);
     }
-    .column-options {
-        display: flex;
-        align-items: center;
-        text-align: center;
+    100% {
+      transform: rotate(0) scale(1) skew(1deg);
     }
-
-    .footer-item {
-        margin: 4px 6px;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 16px;
-        color: #000;
-        list-style-type: none;
-        cursor: pointer;
-        text-align: left;
-        font-weight: 500;
-        font-family: sans-serif;
-        .icon-and-title {
-            display: flex;
-            align-items: center;
-            .icon {
-                margin-right: 10px;
-                svg {
-                    font-size: 20px;
-                }
-            }
-        }
-    }
-
-    .footer-item:hover {
-        color: #337ab7;
-    }
-
-    .footer-list {
-        padding-left: 0px;
-    }
-
-    .footer-item__link {
-        text-decoration: none;
-        color: #000;
-    }
-    .footer-item__icon {
-        padding-right: 10px;
-    }
-    .grid__column-2 {
-        padding-left: 5px;
-        padding-right: 5px;
-        width: 16.6667%;
-    }
-    .grid__column-2-4 {
-        padding-left: 5px;
-        padding-right: 5px;
-        width: 20%;
-    }
-    .grid__column-footer {
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 25%;
-    }
-
-    .grid__column-10 {
-        padding-left: 5px;
-        padding-right: 5px;
-        width: 83.3333%;
-    }
-    /* Responsive */
-    .grid {
-        width: 1490px;
-        max-width: 100%;
-        margin: 0 auto;
-    }
-
-    .grid__full-with {
-        width: 100%;
-    }
-
-    .grid__row {
-        display: flex;
-        /* flex-wrap: wrap; */
-        margin-left: -5px;
-        margin-right: -5px;
-    }
-    .grid__row-10 {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: -5px;
-        margin-right: -5px;
-    }
-
-    .footer__call {
-        position: fixed;
-        bottom: 20px;
-        right: 120px;
-    }
-    .wrapper-phone {
-        width: 200px;
-        height: 60px;
-        position: absolute;
-        border: 1px solid #ccc;
-        bottom: 25px;
-        left: 5px;
-        border-radius: 30px;
-        background-color: #fff;
-        z-index: -1;
-    }
-    .hotline-phone {
-        visibility: visible;
-        background-color: transparent;
-        width: 110px;
-        height: 110px;
-        cursor: pointer;
-        z-index: 11;
-        transition: visibility 0.5s;
-    }
-    /* 00b7e0 */
-    .hotline-phone-circle {
-        position: relative;
-        top: 31px;
-        left: 31px;
-        width: 50px;
-        height: 50px;
-        background-color: white;
-        opacity: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-    }
-    .hotline-phone-circle > span > img {
-        margin-top: 6px;
-        margin-left: 1px;
-    }
-    .hotline-rung {
-        width: 33px;
-        height: 33px;
-        animation: rung 1s infinite ease-in-out;
-    }
-    .hotline-bar {
-        position: absolute;
-        background-color: white;
-        height: 45px;
-        white-space: nowrap;
-        line-height: 40px;
-        padding: 0 10px;
-        background-size: 100%;
-        cursor: pointer;
-        transition: all 0.8s;
-        z-index: 9;
-        border-radius: 50px;
-        left: 45px;
-        bottom: 3px;
-    }
-    .text-hotline {
-        color: #00b7e0;
-        font-size: 16px;
-        font-weight: bold;
-        text-indent: 32px;
-        letter-spacing: 1px;
-        line-height: 45px;
-    }
-    @keyframes rung {
-        0% {
-            transform: rotate(0) scale(1) skew(1deg);
-        }
-        10% {
-            transform: rotate(-25deg) scale(1) skew(1deg);
-        }
-        20% {
-            transform: rotate(25deg) scale(1) skew(1deg);
-        }
-        30% {
-            transform: rotate(-25deg) scale(1) skew(1deg);
-        }
-        40% {
-            transform: rotate(25deg) scale(1) skew(1deg);
-        }
-        50% {
-            transform: rotate(0) scale(1) skew(1deg);
-        }
-        100% {
-            transform: rotate(0) scale(1) skew(1deg);
-        }
-    }
+  }
 }

@@ -1,0 +1,81 @@
+.member-page {
+  height: auto;
+  .header-member {
+    display: flex;
+    align-items: center;
+    height: 41px;
+    border-bottom: 1px solid #ddd;
+    margin-top: 32px;
+    .active {
+      background: #337ab7;
+      color: #fff;
+    }
+    .button-options {
+      padding: 8px 6px;
+      cursor: pointer;
+      margin-right: 6px;
+    }
+  }
+  .content-member {
+    // display: flex;
+    padding: 16px;
+    background-color: #fff;
+    .column1 {
+      margin-right: 50px;
+    }
+    .content-item {
+      .title {
+        margin-top: 30px;
+        margin-bottom: 4px;
+      }
+      .input-member {
+        width: 530px;
+      }
+      .input-member-address {
+        width: 1110px;
+        height: 60px;
+      }
+    }
+  }
+  .footer-member {
+    margin-top: 30px;
+    height: 80px;
+    .change-pass-text {
+      color: #337ab7;
+    }
+    .change-pass-text:hover {
+      color: #337ab7;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+  .wrapper-button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    .update-member {
+      height: 40px;
+      width: 140px;
+      background-image: linear-gradient(
+        to right,
+        #0a64a7 0%,
+        #258dcf 51%,
+        #3db1f3 100%
+      ) !important;
+      color: #fff;
+      border-radius: 6px;
+      transition: 0.5s;
+    }
+    .update-member:hover {
+      background-image: linear-gradient(
+        to right,
+        #0a64a7 0%,
+        #258dcf 51%,
+        #3db1f3 100%
+      ) !important;
+      color: #fff;
+      background-position: right center;
+    }
+  }
+}

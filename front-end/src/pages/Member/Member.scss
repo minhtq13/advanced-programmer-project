@@ -11,44 +11,13 @@
       color: #fff;
     }
     .button-options {
-      padding: 8px 6px;
+      padding: 8px;
       cursor: pointer;
       margin-right: 6px;
+      font-size: 18px;
     }
   }
-  .content-member {
-    // display: flex;
-    padding: 16px;
-    background-color: #fff;
-    .column1 {
-      margin-right: 50px;
-    }
-    .content-item {
-      .title {
-        margin-top: 30px;
-        margin-bottom: 4px;
-      }
-      .input-member {
-        width: 530px;
-      }
-      .input-member-address {
-        width: 1110px;
-        height: 60px;
-      }
-    }
-  }
-  .footer-member {
-    margin-top: 30px;
-    height: 80px;
-    .change-pass-text {
-      color: #337ab7;
-    }
-    .change-pass-text:hover {
-      color: #337ab7;
-      cursor: pointer;
-      text-decoration: underline;
-    }
-  }
+
   .wrapper-button {
     display: flex;
     justify-content: center;

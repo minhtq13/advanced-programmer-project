@@ -1,0 +1,28 @@
+.wrapper-account-component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .account-component {
+        width: 530px;
+        margin-top: 32px;
+        .header {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            height: 40px;
+            border-bottom: 1px solid #ddd;
+            margin-top: 32px;
+            .active {
+                background: #337ab7;
+                color: #fff;
+            }
+            .button-options {
+                padding: 8px;
+                cursor: pointer;
+                margin-right: 6px;
+                font-size: 16px;
+                width: 50%;
+            }
+        }
+    }
+}

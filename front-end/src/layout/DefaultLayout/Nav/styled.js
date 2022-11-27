@@ -30,6 +30,10 @@ export const WrapperStyled = styled.div`
         display: flex;
         width: 100%;
     }
+    .menu-cinemas {
+        display: flex;
+        align-items: center;
+    }
 
     .nav-content {
         text-align: center;

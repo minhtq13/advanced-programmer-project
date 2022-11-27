@@ -2,7 +2,30 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { WrapperStyled } from "./styled";
 import logoBeta from "../../../asset/images/logoBeta.png";
+import { Menu } from "antd";
+import { AppstoreOutlined } from "@ant-design/icons";
 export default function Nav() {
+    function getItem(label, key, icon, children, type) {
+        return {
+            key,
+            icon,
+            children,
+            label,
+            type,
+        };
+    }
+    const items = [
+        getItem("Beta Thanh Xuân", "sub2", <AppstoreOutlined />, [
+            getItem("Hà Nội", "sub3", null, [
+                getItem("Beta Thanh Xuân", "1"),
+                getItem("Beta Giải Phóng", "2"),
+            ]),
+            getItem("TPHCM", "sub4", null, [getItem("Beta Quang Trung", "3")]),
+            getItem("Bắc Giang", "sub5", null, [
+                getItem("Beta Bắc Giang", "4"),
+            ]),
+        ]),
+    ];
     return (
         <WrapperStyled>
             <div className="wrapper-header">
@@ -14,6 +37,14 @@ export default function Nav() {
                             </div>
                         </Link>
 
+                        <Menu
+                            className="menu-cinemas"
+                            style={{
+                                width: 256,
+                            }}
+                            mode="vertical"
+                            items={items}
+                        />
                         <div className="nav-content">
                             <Link to="/home" exact className="nav-links">
                                 Trang chủ

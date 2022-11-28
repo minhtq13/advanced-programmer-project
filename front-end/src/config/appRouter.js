@@ -7,14 +7,14 @@ import Price from "../pages/Price";
 import Schedule from "../pages/Schedule/Schedule";
 
 const publicRoutes = [
-    { path: "/", component: Home },
-    { path: "/home", component: Home },
-    { path: "/price", component: Price },
-    { path: "/schedule", component: Schedule },
-    { path: "/movie", component: Movie },
-    { path: "/cinemas", component: Cinemas },
-    { path: "/member", component: Member },
-    { path: "/login", component: Account },
+  { path: "/", component: Home, layout: "HomePageLayout" },
+  { path: "/home", component: Home, layout: "HomePageLayout" },
+  { path: "/price", component: Price },
+  { path: "/schedule", component: Schedule },
+  { path: "/movie", component: Movie },
+  { path: "/cinemas", component: Cinemas },
+  { path: "/member", component: Member },
+  { path: "/login", component: Account },
 ];
 
 const privateRoutes = [];

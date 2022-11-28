@@ -1,16 +1,15 @@
 .home-page {
-  align-items: stretch !important;
-  display: block !important;
-  flex-direction: row !important;
   .box-item-img {
     width: 100%;
     height: calc(100vw / 2.75);
   }
   .banner1 {
     width: 100vw;
-    align-items: stretch !important;
-    display: block !important;
-    flex-direction: row !important;
+  }
+  .movie-component {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 

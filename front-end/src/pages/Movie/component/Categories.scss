@@ -1,21 +1,21 @@
 .filter-categories {
+  display: flex;
+  .tab {
+    font-size: 30px;
+    font-weight: 600;
+    margin-right: 30px;
+    cursor: pointer;
+    height: 60px;
     display: flex;
-    .tab {
-        font-size: 30px;
-        font-weight: 600;
-        margin-right: 30px;
-        cursor: pointer;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        border-bottom: 1px solid #ccc;
-        color: rgb(73, 69, 69);
-    }
-    .active {
-        border-bottom: 4px solid transparent;
-        border-image: linear-gradient(to right, #39adf0 0%, #075fa3 100%);
-        border-image-slice: 1;
-        border-width: 0px 0px 4px 0px;
-        color: #03599d;
-    }
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    color: rgb(73, 69, 69);
+  }
+  .active {
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(to right, #39adf0 0%, #075fa3 100%);
+    border-image-slice: 1;
+    border-width: 0px 0px 4px 0px;
+    color: #03599d;
+  }
 }

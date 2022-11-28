@@ -37,10 +37,10 @@ body {
 
 // fix empty right space react-slick
 .slick-next {
-  right: 10px;
-  z-index: 1000;
+  right: 10px !important;
+  z-index: 1000 !important;
 }
 .slick-prev {
-  left: 10px;
-  z-index: 1000;
+  left: 10px !important;
+  z-index: 1000 !important;
 }

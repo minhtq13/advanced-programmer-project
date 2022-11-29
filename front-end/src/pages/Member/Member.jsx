@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import BetaPoint from "./component/BetaPoint";
-import InfoUser from "./component/InfoUser";
-import MembershipCard from "./component/MembershipCard";
+import BetaPoint from "./components/BetaPoint";
+import InfoUser from "./components/InfoUser";
+import MembershipCard from "./components/MembershipCard";
 import "./Member.scss";
 
 const dataHeader = [

@@ -1,0 +1,41 @@
+.wrapper-login-component {
+  background-color: #fff;
+  padding: 20px 15px;
+  .title {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .input-email,
+  .input-password {
+    border-radius: 6px !important;
+    margin-bottom: 4px;
+  }
+  .wrapper-login-form-forgot {
+    margin: 12px 0px;
+    margin-top: 32px;
+    .login-form-forgot {
+      font-size: 16px;
+    }
+  }
+  .button-login {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .login-form-button {
+      width: 254px;
+      height: 40px;
+      border-radius: 6px;
+    }
+  }
+  .ant-input-prefix {
+    margin-right: 6px;
+  }
+  .ant-form-item-row {
+    margin-bottom: 32px !important;
+  }
+  .ant-input-affix-wrapper {
+    padding: 6px 11px;
+  }
+}

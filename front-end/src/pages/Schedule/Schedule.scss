@@ -1,29 +1,29 @@
 .schedule-page {
-    height: auto;
-    .header-schedule {
-        display: flex;
-        align-items: center;
-        border-bottom: 1px solid #ddd;
-        margin-top: 32px;
-        height: 54px;
+  height: auto;
+  .header-schedule {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    margin-top: 32px;
+    height: 54px;
 
-        .active {
-            border-bottom: 4px solid transparent;
-            border-image: linear-gradient(to right, #39adf0 0%, #075fa3 100%);
-            border-image-slice: 1;
-            border-width: 0px 0px 4px 0px;
-            color: #03599d;
-        }
-        .button-options {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 8px;
-            cursor: pointer;
-            margin-right: 6px;
-            font-size: 18px;
-            width: 157px;
-            height: 54px;
-        }
+    .active {
+      border-bottom: 4px solid transparent;
+      border-image: linear-gradient(to right, #39adf0 0%, #075fa3 100%);
+      border-image-slice: 1;
+      border-width: 0px 0px 4px 0px;
+      color: #03599d;
     }
+    .button-options {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      cursor: pointer;
+      margin-right: 6px;
+      font-size: 20px;
+      width: 157px;
+      height: 54px;
+    }
+  }
 }

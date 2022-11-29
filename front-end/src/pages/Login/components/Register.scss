@@ -1,0 +1,50 @@
+.wrapper-register-component {
+  background-color: #fff;
+  padding: 20px 6px;
+  .content-register {
+    padding: 16px;
+    background-color: #fff;
+    .column1 {
+      margin-right: 20px;
+    }
+    .content-item {
+      .title {
+        margin-top: 30px;
+        margin-bottom: 4px;
+        font-size: 16px;
+      }
+      .input-member {
+        width: 235px;
+      }
+    }
+    .footer-member {
+      margin-top: 30px;
+      height: 80px;
+      .change-pass-text {
+        color: #337ab7;
+      }
+      .change-pass-text:hover {
+        color: #337ab7;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+  .title {
+    span {
+      color: red;
+    }
+  }
+  .footer-register {
+    margin-top: 30px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .register-form-button {
+      width: 132px;
+      height: 40px;
+      border-radius: 6px;
+    }
+  }
+}

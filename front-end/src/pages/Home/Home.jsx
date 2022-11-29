@@ -13,7 +13,7 @@ export default function Homepage() {
     dots: false,
     infinite: true,
     speed: 300,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -22,27 +22,27 @@ export default function Homepage() {
   return (
     <div className="home-page">
       <div className="banner1">
-        <div id="promotion" class="promotion">
+        <div id="promotion" className="promotion">
           <div className="container1">
             <Slider {...settings}>
               <div className="promotion-box">
-                <div class="promotion__review-box">
-                  <div class="box-item">
-                    <img class="box-item-img" src={OPBanner} alt="" />
+                <div className="promotion__review-box">
+                  <div className="box-item">
+                    <img className="box-item-img" src={OPBanner} alt="" />
                   </div>
                 </div>
               </div>
               <div className="promotion-box">
-                <div class="promotion__review-box">
-                  <div class="box-item">
-                    <img class="box-item-img" src={MuRomBanner} alt="" />
+                <div className="promotion__review-box">
+                  <div className="box-item">
+                    <img className="box-item-img" src={MuRomBanner} alt="" />
                   </div>
                 </div>
               </div>
               <div className="promotion-box">
-                <div class="promotion__review-box">
-                  <div class="box-item">
-                    <img class="box-item-img" src={HPMBanner} alt="" />
+                <div className="promotion__review-box">
+                  <div className="box-item">
+                    <img className="box-item-img" src={HPMBanner} alt="" />
                   </div>
                 </div>
               </div>

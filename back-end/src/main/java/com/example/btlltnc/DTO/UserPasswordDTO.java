@@ -1,4 +1,4 @@
-package com.example.btlltnc.dto;
+package com.example.btlltnc.DTO;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;

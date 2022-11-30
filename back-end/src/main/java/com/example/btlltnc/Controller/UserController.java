@@ -5,14 +5,12 @@ import com.example.btlltnc.Utils.AES;
 import com.example.btlltnc.Model.User;
 
 import com.example.btlltnc.Repository.UserRepository;
-import com.example.btlltnc.Utils.ResourceNotFoundException;
-import com.example.btlltnc.dto.UserPasswordDTO;
+import com.example.btlltnc.DTO.UserPasswordDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Optional;
 
 
 @RestController

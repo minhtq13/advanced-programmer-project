@@ -1,5 +1,5 @@
-import { Button } from "antd";
 import React from "react";
+import ButtonBuyTicket from "../../../component/ButtonBuyTicket/ButtonBuyTicket";
 import "./Menu.scss";
 
 const Menu = ({ items }) => {
@@ -28,7 +28,7 @@ const Menu = ({ items }) => {
               </div>
             </div>
             <div className="buy-ticket">
-              <Button className="button-buy-ticket">Mua vé</Button>
+              <ButtonBuyTicket />
             </div>
           </div>
         );

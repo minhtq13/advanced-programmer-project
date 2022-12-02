@@ -3,19 +3,17 @@ import React from "react";
 import { Dropdown, Space } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import "./MenuAccount.scss";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const MenuAccount = () => {
   const navigate = useNavigate();
-  const location = useLocation();
 
-  console.log(location.pathname.split("/")[0]);
   const items = [
     {
       key: "1",
       label: <div className="drop-item">Thông tin tài khoản</div>,
       onClick: () => {
-        navigate(`${location.pathname.split("/")[0]}`);
+        navigate("/member");
       },
     },
     {

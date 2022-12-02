@@ -3,6 +3,7 @@ import Home from "../pages/Home/Home";
 import Account from "../pages/Login/Account";
 import Member from "../pages/Member/Member";
 import Movie from "../pages/Movie";
+import MovieChair from "../pages/MovieChair/MovieChair";
 import Price from "../pages/Price";
 import Schedule from "../pages/Schedule/Schedule";
 
@@ -15,6 +16,8 @@ const publicRoutes = [
   { path: "/cinemas", component: Cinemas },
   { path: "/member", component: Member },
   { path: "/login", component: Account },
+  // private routes
+  { path: "/movie-chair", component: MovieChair },
 ];
 
 const privateRoutes = [];

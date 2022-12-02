@@ -1,0 +1,31 @@
+.wrapper-button-buy-ticket {
+  .button-buy-ticket {
+    border: none;
+    outline: none;
+    background-image: linear-gradient(
+      to right,
+      #0a64a7 0%,
+      #258dcf 51%,
+      #3db1f3 100%
+    ) !important;
+    color: #fff;
+    width: 227.5px;
+    height: 36px;
+    cursor: pointer;
+    border-radius: 6px;
+
+    font-weight: 600;
+    span {
+      font-size: 16px;
+    }
+  }
+  .button-buy-ticket:hover {
+    background-image: linear-gradient(
+      to right,
+      #0a64a7 0%,
+      #258dcf 51%,
+      #3db1f3 100%
+    ) !important;
+    background-position: right center;
+  }
+}

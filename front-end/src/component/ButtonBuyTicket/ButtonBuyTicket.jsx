@@ -1,35 +1,36 @@
 import { Button, Modal } from "antd";
 import React, { useState } from "react";
 import "./ButtonBuyTicket.scss";
-import { useNavigate } from "react-router-dom";
+import ModalChooseSchedule from "./component/ModalChooseSchedule";
 
 const ButtonBuyTicket = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const navigate = useNavigate();
+
   const showModal = () => {
     setIsModalOpen(true);
   };
   const handleOk = () => {
     setIsModalOpen(false);
-    navigate("/movie-chair");
   };
   const handleCancel = () => {
     setIsModalOpen(false);
   };
+
   return (
     <div className="wrapper-button-buy-ticket">
       <Button type="primary" onClick={showModal} className="button-buy-ticket">
         Mua vé
       </Button>
       <Modal
-        title="Basic Modal"
+        className="modal-button-buy-ticket"
+        title="LỊCH CHIẾU"
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
+        footer={[]}
+        width={"50vw"}
       >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
+        <ModalChooseSchedule />
       </Modal>
     </div>
   );

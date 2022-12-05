@@ -1,11 +1,6 @@
-import OPFilm from "../../../asset/images/cinemas-OP.jpg";
-import WFFlim from "../../../asset/images/cinemas-WF.jpg";
-import HPMFlim from "../../../asset/images/cinemas-HPM.jpg";
-
 const dataDay1 = [
   {
     id: 1,
-    img: OPFilm,
     title: "One Piece Film: Red",
     tag: "Hoạt hình, Hành động",
     duration: 115,
@@ -43,7 +38,7 @@ const dataDay1 = [
   },
   {
     id: 2,
-    img: WFFlim,
+
     title: "Chiến Binh Báo Đen 2: Wakanda Bất Diệt",
     tag: "Hành động, Phiêu Lưu",
     duration: 162,
@@ -65,7 +60,7 @@ const dataDay1 = [
   },
   {
     id: 3,
-    img: HPMFlim,
+
     title: "Hành Phúc Máu",
     tag: "Tâm lý, Kinh dị",
     duration: 110,

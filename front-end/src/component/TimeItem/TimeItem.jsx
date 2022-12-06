@@ -1,10 +1,12 @@
-import { Button, Modal } from "antd";
+import { Modal } from "antd";
 import React, { useState } from "react";
-import "./TimeItem.scss";
 import { useSelector } from "react-redux";
+import ButtonConfirm from "../ButtonConfirm/ButtonConfirm";
+import "./TimeItem.scss";
 
 const TimeItem = ({ timeItem, emptyChair, nameFilm }) => {
   const { dateMovie } = useSelector((state) => state.appReducer);
+  // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
   const showModal = () => {
@@ -30,16 +32,7 @@ const TimeItem = ({ timeItem, emptyChair, nameFilm }) => {
         onOk={handleOk}
         onCancel={handleCancel}
         width={"40vw"}
-        footer={[
-          <Button
-            key="submit"
-            type="primary"
-            loading={loading}
-            onClick={handleOk}
-          >
-            ĐỒNG Ý
-          </Button>,
-        ]}
+        footer={[<ButtonConfirm buttonName="ĐỒNG Ý" />]}
       >
         <div className="content-modal">
           <div className="name-film">{nameFilm}</div>

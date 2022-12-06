@@ -17,7 +17,7 @@
       border-image: linear-gradient(to right, #39adf0 0%, #075fa3 100%);
       border-image-slice: 1;
       border-width: 0px 0px 4px 0px;
-      color: #03599d;
+      color: var(--name-film-color);
     }
     .button-options {
       display: flex;

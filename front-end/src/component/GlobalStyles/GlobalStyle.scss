@@ -8,6 +8,8 @@
   // Default layout
   --margin-top-content: 75px;
   --padding-bottom-content: 50px;
+  // color
+  --name-film-color: #03599d;
 }
 
 html {
@@ -59,4 +61,8 @@ body {
 .ant-modal-close {
   outline: none !important;
   border: none !important;
+}
+// font-weight
+.text-bold {
+  font-weight: 600;
 }

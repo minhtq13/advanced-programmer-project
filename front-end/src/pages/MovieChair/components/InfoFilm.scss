@@ -1,0 +1,54 @@
+.wrapper-info-film {
+  background-color: #fff;
+  height: 700px;
+
+  .row1 {
+    display: flex;
+    .name-animation {
+      width: 50%;
+      .name {
+        margin: 24px 0px 24px 16px;
+        font-weight: 700;
+        font-size: 24px;
+        color: var(--name-film-color);
+      }
+      .animation {
+        font-weight: 600;
+        font-size: 18px;
+        margin-left: 16px;
+      }
+    }
+    .wrapper-img {
+      width: 150px;
+      height: 237px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .row2 {
+    border-bottom: 1px dashed #ccc;
+  }
+  .row2,
+  .row3 {
+    padding: 20px 30px;
+    .wrapper-item {
+      margin: 12px 0px;
+      display: flex;
+      .info {
+        min-width: 150px;
+      }
+      .detail {
+        font-weight: 600;
+      }
+    }
+  }
+  .button-confirm-component {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 8px;
+  }
+}

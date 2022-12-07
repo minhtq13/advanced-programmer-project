@@ -26,4 +26,14 @@ public class RoomController extends BaseController<Room, RoomRepository> {
     public ResponseEntity<?> findByName(@RequestParam(name="name", required = false) String name, HttpServletRequest request){
         return ResponseEntity.ok(repository.findRoomByName(name));
     }
+
+    @GetMapping(path = "/findByNameCinema")
+    public ResponseEntity<?> findByNameCinema(@RequestParam(name="nameCinema", required = false) String nameCinema, HttpServletRequest request){
+        return ResponseEntity.ok(repository.findRoomByNameCinema(nameCinema));
+    }
+
+    @GetMapping(path = "/findByNameCinemaAndName")
+    public ResponseEntity<?> findByNameCinemaAndName(@RequestParam(name="nameCinema", required = false) String nameCinema, @RequestParam(name="name", required = false) String name, HttpServletRequest request){
+        return ResponseEntity.ok(repository.findRoomByNameCinemaAndName(nameCinema, name));
+    }
 }

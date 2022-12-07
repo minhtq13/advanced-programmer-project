@@ -25,4 +25,14 @@ public class FilmController extends BaseController<Film, FilmRepository> {
     public ResponseEntity<?> findByName(@RequestParam(name="name", required = false) String name, HttpServletRequest request){
         return ResponseEntity.ok(repository.findFilmsByName(name));
     }
+
+    @GetMapping(path = "/findByNameCinema")
+    public ResponseEntity<?> findByNameCinema(@RequestParam(name="nameCinema", required = false) String nameCinema, HttpServletRequest request){
+        return ResponseEntity.ok(repository.findFilmsByNameCinema(nameCinema));
+    }
+
+    @GetMapping(path = "/findByNameCinemaAndName")
+    public ResponseEntity<?> findByNameCinemaAndName(@RequestParam(name="nameCinema", required = false) String nameCinema, @RequestParam(name="name", required = false) String name, HttpServletRequest request){
+        return ResponseEntity.ok(repository.findFilmsByNameCinemaAndName(nameCinema, name));
+    }
 }

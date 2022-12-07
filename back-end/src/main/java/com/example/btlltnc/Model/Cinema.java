@@ -6,16 +6,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Collection;
 
 @Entity
-@Table(name = "room")
+@Table(name = "cinema")
 @NoArgsConstructor
 @Getter
 @Setter
-public class Room extends BaseModel {
+public class Cinema extends BaseModel {
     private String name;
-    private Integer rowRoom;
-    private Integer columnRoom;
-    private String nameCinema;
+    private String city;
 }

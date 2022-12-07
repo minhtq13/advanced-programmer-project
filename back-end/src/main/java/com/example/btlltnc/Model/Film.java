@@ -21,4 +21,5 @@ public class Film extends BaseModel {
     private Integer age;
     private String type;
     private Integer hot;
+    private String nameCinema;
 }

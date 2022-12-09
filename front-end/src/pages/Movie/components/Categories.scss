@@ -1,9 +1,11 @@
 .filter-categories {
   display: flex;
+  width: 90%;
+  justify-content: space-around;
+
   .tab {
     font-size: 30px;
-    font-weight: 600;
-    margin-right: 30px;
+    font-weight: 500;
     cursor: pointer;
     height: 60px;
     display: flex;

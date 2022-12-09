@@ -29,14 +29,12 @@ html *::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0);
 }
 body {
-  // font-family: "Montserrat", sans-serif;
-  // font-family: "ProximaNova", sans-serif;
-  // font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   overflow: overlay;
   background-color: #f8f8f8;
+  color: rgb(90, 86, 86);
 }
 
 * {
@@ -65,4 +63,7 @@ body {
 // font-weight
 .text-bold {
   font-weight: 600;
+}
+a {
+  color: rgb(90, 86, 86);
 }

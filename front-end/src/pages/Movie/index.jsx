@@ -3,8 +3,9 @@ import { WrapperStyled } from "./styled";
 import items from "./data";
 import MenuMovie from "./components/Menu";
 import Categories from "./components/Categories";
+import { useEffect } from "react";
 
-const allCategories = ["all", ...new Set(items.map((item) => item.category))];
+const allCategories = [...new Set(items.map((item) => item.category))];
 
 export default function Movie() {
   const [menuItems, setMenuItems] = useState(items);
@@ -12,21 +13,23 @@ export default function Movie() {
   const [categories, setCategories] = useState(allCategories);
 
   const filterItems = (category) => {
-    if (category === "all") {
-      setMenuItems(items);
-      return;
-    }
     const newItems = items.filter((item) => item.category === category);
     setMenuItems(newItems);
   };
+
+  useEffect(() => {
+    const newItems = items.filter((item) => item.category === "upcoming");
+    setMenuItems(newItems);
+  }, []);
+
   return (
     <WrapperStyled>
       <div className="wrapper-movie-page" style={{ width: "100%" }}>
         <div className="movie-page">
-          <div className="header">
+          <div className="header-movie-page">
             <Categories categories={categories} filterItems={filterItems} />
           </div>
-          <div className="content">
+          <div className="content-movie-page">
             <MenuMovie items={menuItems} />
           </div>
         </div>

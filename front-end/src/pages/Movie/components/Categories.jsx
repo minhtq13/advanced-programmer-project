@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import "./Categories.scss";
 
 const switchCategory = (item) => {
-  if (item === "all") return "TẤT CẢ";
-  else if (item === "upcoming") return "PHIM SẮP CHIẾU";
+  if (item === "upcoming") return "PHIM SẮP CHIẾU";
   else if (item === "showing") return "PHIM ĐANG CHIẾU";
   else if (item === "especially") return "SUẤT CHIẾU ĐẶC BIỆT";
 };

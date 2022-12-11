@@ -15,4 +15,8 @@ import javax.persistence.*;
 public class Cinema extends BaseModel {
     private String name;
     private String city;
+    private String address;
+    private String ìmg;
+    private String Hot;
+    private String phoneNumber;
 }

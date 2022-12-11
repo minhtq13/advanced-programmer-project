@@ -28,6 +28,21 @@ public class TicketController extends BaseController<Ticket, TicketRepository> {
     }
     @GetMapping(path = "/findByUsers")
     public ResponseEntity<?> findByUsers(@RequestParam(name="nameUser", required = false) String nameUser, HttpServletRequest request){
-        return ResponseEntity.ok(repository.findTicketdByUser(nameUser));
+        return ResponseEntity.ok(repository.findTicketByUser(nameUser));
+    }
+
+    @GetMapping(path = "/findByCinema")
+    public ResponseEntity<?> findByCinema(@RequestParam(name="nameCinema", required = false) String nameCinema, HttpServletRequest request){
+        return ResponseEntity.ok(repository.findTicketByCinema(nameCinema));
+    }
+
+    @GetMapping(path = "/findByRoom")
+    public ResponseEntity<?> findByRoom(@RequestParam(name="nameRoom", required = false) String nameRoom, HttpServletRequest request){
+        return ResponseEntity.ok(repository.findTicketByRoom(nameRoom));
+    }
+
+    @GetMapping(path = "/findByFilm")
+    public ResponseEntity<?> findByFilm(@RequestParam(name="nameFilm", required = false) String nameFilm, HttpServletRequest request){
+        return ResponseEntity.ok(repository.findTicketByFilm(nameFilm));
     }
 }

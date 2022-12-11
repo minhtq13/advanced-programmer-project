@@ -9,6 +9,6 @@ import java.util.List;
 
 @Repository
 public interface ScheduleRepository extends BaseRepository<Schedule> {
-    @Query(value = "from Schedule schedule where (schedule.nameFilm=?1 and schedule.nameRoom=?2)")
-    List<Schedule> findScheduleByNameFilmAndNameRoom(String nameFilm, String nameRoom);
+    @Query(value = "from Schedule schedule where schedule.nameFilm=?1")
+    List<Schedule> findScheduleByNameFilm(String nameFilm);
 }

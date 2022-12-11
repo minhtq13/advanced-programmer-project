@@ -16,7 +16,7 @@ public class Cinema extends BaseModel {
     private String name;
     private String city;
     private String address;
-    private String ìmg;
+    private String img;
     private String Hot;
     private String phoneNumber;
 }

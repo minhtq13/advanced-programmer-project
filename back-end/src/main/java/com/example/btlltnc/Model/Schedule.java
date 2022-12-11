@@ -13,8 +13,11 @@ import javax.persistence.*;
 @Getter
 @Setter
 public class Schedule extends BaseModel{
-    private String date;
-    private Integer time;
-    private String nameRoom;
     private String nameFilm;
+    private String date;
+    private String time;
+    private Integer duration;
+    private String type;
+    private String animation;
+    private Integer soldOut;
 }

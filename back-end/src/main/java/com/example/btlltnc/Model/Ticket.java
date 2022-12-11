@@ -19,7 +19,10 @@ public class Ticket extends BaseModel {
     private String nameFilm;
     private String nameRoom;
     private String nameUser;
+    private String nameCinema;
     private Integer fare;
-    private Integer rowTicket;
+    private String rowTicket;
     private Integer columnTicket;
+    private String date;
+    private String time;
 }

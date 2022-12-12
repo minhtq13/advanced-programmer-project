@@ -1,6 +1,6 @@
 .wrapper-info-film {
   background-color: #fff;
-  height: 700px;
+  min-height: 700px;
 
   .row1 {
     display: flex;
@@ -41,6 +41,13 @@
       }
       .detail {
         font-weight: 600;
+        flex-wrap: wrap;
+        .chair-name::after {
+          content: ",";
+        }
+        .chair-name:last-child::after {
+          content: none;
+        }
       }
     }
   }
@@ -50,5 +57,6 @@
     justify-content: center;
     text-align: center;
     margin-top: 8px;
+    padding-bottom: 20px;
   }
 }

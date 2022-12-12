@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   dateMovie: "28/11 - T2",
+  chooseChair: [],
 };
 
 const appReducer = createSlice({
@@ -11,8 +12,11 @@ const appReducer = createSlice({
     setDateMovie: (state, action) => {
       state.dateMovie = action.payload;
     },
+    setChooseChair: (state, action) => {
+      state.chooseChair = [...action.payload];
+    },
   },
 });
 
-export const { setDateMovie } = appReducer.actions;
+export const { setDateMovie, setChooseChair } = appReducer.actions;
 export default appReducer.reducer;

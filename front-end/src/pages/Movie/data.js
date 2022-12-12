@@ -82,5 +82,14 @@ const menu = [
     time: "116 phút",
     date: "18/11/2022",
   },
+  {
+    id: 10,
+    title: "quarantine buddy",
+    category: "showing",
+    vibe: 16.99,
+    img: thucdonbian,
+    time: "116 phút",
+    date: "18/11/2022",
+  },
 ];
 export default menu;

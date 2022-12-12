@@ -29,14 +29,12 @@ html *::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0);
 }
 body {
-  // font-family: "Montserrat", sans-serif;
-  // font-family: "ProximaNova", sans-serif;
-  // font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   overflow: overlay;
   background-color: #f8f8f8;
+  color: rgb(90, 86, 86);
 }
 
 * {
@@ -44,7 +42,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   line-height: 22px;
-  // font-family: "Roboto", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 // fix empty right space react-slick
@@ -65,4 +63,7 @@ body {
 // font-weight
 .text-bold {
   font-weight: 600;
+}
+a {
+  color: rgb(90, 86, 86);
 }

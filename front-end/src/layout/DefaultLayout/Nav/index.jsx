@@ -20,19 +20,23 @@ export default function Nav() {
         getItem(cinemaName, "sub1", <AppstoreOutlined />, [
             getItem("Hà Nội", "sub2", null, [
                 getItem("Beta Thanh Xuân", "1"),
-                getItem("Beta Giải Phóng", "2"),
+                getItem("Beta Mỹ Đình", "2"),
+                getItem("Beta Đan Phượng", "3"),
+                getItem("Beta Giải Phóng", "4"),
             ]),
-            getItem("TPHCM", "sub3", null, [getItem("Beta Quang Trung", "3")]),
+            getItem("TPHCM", "sub3", null, [getItem("Beta Quang Trung", "9")]),
             getItem("Bắc Giang", "sub4", null, [
-                getItem("Beta Bắc Giang", "4"),
+                getItem("Beta Bắc Giang", "10"),
             ]),
         ]),
     ];
     const handleClick = (e) => {
         if (e.key === "1") return setCinemaName("Beta Thanh Xuân");
-        else if (e.key === "2") return setCinemaName("Beta Giải Phóng");
-        else if (e.key === "3") return setCinemaName("Beta Quang Trung");
-        else if (e.key === "4") return setCinemaName("Beta Bắc Giang");
+        else if (e.key === "2") return setCinemaName("Beta Mỹ Đình");
+        else if (e.key === "3") return setCinemaName("Beta Đan Phượng");
+        else if (e.key === "4") return setCinemaName("Beta Giải Phóng");
+        else if (e.key === "9") return setCinemaName("Beta Quang Trung");
+        else if (e.key === "10") return setCinemaName("Beta Bắc Giang");
     };
     return (
         <div className="wrapper-header">

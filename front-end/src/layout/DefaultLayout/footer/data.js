@@ -56,11 +56,11 @@ const dataColumn2 = [
     },
     {
         id: 2,
-        title: "Beta Cinemas Giải phóng, Hà Nội",
+        title: "Beta Cinemas Mỹ Đình, Hà Nội",
     },
     {
         id: 3,
-        title: "Beta Cinemas Giải phóng, Hà Nội",
+        title: "Beta Cinemas Đan Phượng, Hà Nội",
     },
     {
         id: 4,
@@ -68,29 +68,29 @@ const dataColumn2 = [
     },
     {
         id: 5,
-        title: "Beta Cinemas Giải phóng, Hà Nội",
+        title: "Beta Cinemas Quang Trung, HCM",
     },
     {
         id: 6,
-        title: "Beta Cinemas Giải phóng, Hà Nội",
+        title: "Beta Cinemas Bắc Giang, Bắc Giang",
     },
 
     {
         id: 7,
-        title: "Beta Cinemas Giải phóng, Hà Nội",
+        title: "Beta Cinemas Biên Hòa, Đồng Nai",
     },
     {
         id: 8,
-        title: "Beta Cinemas Giải phóng, Hà Nội",
+        title: "Beta Cinemas Long Khánh, Đồng Nai",
     },
 
     {
         id: 9,
-        title: "Beta Cinemas Giải phóng, Hà Nội",
+        title: "Beta Cinemas Long Thành, Đồng Nai",
     },
     {
         id: 10,
-        title: "Beta Cinemas Giải phóng, Hà Nội",
+        title: "Beta Cinemas Thái Nguyên, Thái Nguyên",
     },
 ];
 

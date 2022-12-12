@@ -2,11 +2,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "./footer.scss";
+import { RightOutlined } from "@ant-design/icons";
+import { dataColumn1, dataColumn2, dataColumn3 } from "./data";
 import Phone from "../../../asset/images/phone.png";
 import logoBeta from "../../../asset/images/logoBeta.png";
-import { RightOutlined } from "@ant-design/icons";
-
-import { dataColumn1, dataColumn2, dataColumn3 } from "./data";
+import DaThongBao from "../../../asset/images/dathongbao.png";
 
 const footer = () => {
     return (
@@ -85,6 +85,11 @@ const footer = () => {
                                         );
                                     })}
                                 </ul>
+                                <img
+                                    style={{ height: "68px", width: "180px" }}
+                                    src={DaThongBao}
+                                    alt=""
+                                />
                             </div>
                             <div
                                 className="grid__column-footer"

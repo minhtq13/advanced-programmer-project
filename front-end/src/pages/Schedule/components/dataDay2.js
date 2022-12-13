@@ -1,14 +1,14 @@
-import OPFilm from "../../../asset/images/cinemas-OP.jpg";
-import WFFlim from "../../../asset/images/cinemas-WF.jpg";
-import HPMFlim from "../../../asset/images/cinemas-HPM.jpg";
+import shazamFilm from "../../../asset/images/shazam-film.jpg";
+import AvatarFilm from "../../../asset/images/flim-avatar.jpg";
+import thanhsoiFilm from "../../../asset/images/thanhsoi-film.jpg";
 
-const dataDay1 = [
+const dataDay2 = [
   {
     id: 1,
-    img: OPFilm,
-    title: "One Piece Film: Red",
+    img: shazamFilm,
+    title: "Shazam! Cơn thịnh nộ",
     tag: "Hoạt hình, Hành động",
-    duration: 115,
+    duration: 128,
     animation: "2D Phụ Đề",
     children: [
       {
@@ -43,10 +43,10 @@ const dataDay1 = [
   },
   {
     id: 2,
-    img: WFFlim,
-    title: "Chiến Binh Báo Đen 2: Wakanda Bất Diệt",
+    img: AvatarFilm,
+    title: "Avatar 2: Dòng chảy của nước",
     tag: "Hành động, Phiêu Lưu",
-    duration: 162,
+    duration: 192,
     animation: "2D Phụ Đề",
     children: [
       {
@@ -65,10 +65,10 @@ const dataDay1 = [
   },
   {
     id: 3,
-    img: HPMFlim,
-    title: "Hạnh Phúc Máu",
-    tag: "Tâm lý, Kinh dị",
-    duration: 110,
+    img: thanhsoiFilm,
+    title: "Thanh Sói",
+    tag: "Hành động",
+    duration: 109,
     animation: "2D Phụ Đề",
     children: [
       {
@@ -82,4 +82,4 @@ const dataDay1 = [
     ],
   },
 ];
-export default dataDay1;
+export default dataDay2;

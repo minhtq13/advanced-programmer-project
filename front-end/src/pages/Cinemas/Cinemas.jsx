@@ -1,10 +1,19 @@
 import React from "react";
 import "./Cinemas.scss";
+import useCinema from "../../hooks/useCinema";
 import BTBacGiang from "../../asset/images/btbg.jpg";
-
 import { dataHotFilm } from "./data";
+import { useEffect } from "react";
 
 const Cinemas = () => {
+  const { infoCinema, getInfoCinemaInCinamePage } = useCinema();
+  useEffect(() => {
+    if (infoCinema) {
+      getInfoCinemaInCinamePage();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div className="cinemas-component">
       <div className="left-panel col-6">

@@ -1,8 +1,18 @@
 import React from "react";
-import ButtonBuyTicket from "../../../component/ButtonBuyTicket/ButtonBuyTicket";
+import { useEffect } from "react";
 import "./Menu.scss";
+import useFilm from "../../../hooks/useFilm";
+import ButtonBuyTicket from "../../../component/ButtonBuyTicket/ButtonBuyTicket";
 
 const Menu = ({ items }) => {
+  const { infoFilm, getInfoFilmInFilmPage } = useFilm();
+  useEffect(() => {
+    if (infoFilm) {
+      getInfoFilmInFilmPage();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div className="wrapper-movie-item">
       {items.map((item) => {

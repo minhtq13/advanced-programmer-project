@@ -1,12 +1,12 @@
 import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import AvatarBanner from "../../asset/images/film-avatar-banner.jpg";
+import MuRomBanner from "../../asset/images/murombanner.png";
+import OPBanner from "../../asset/images/OPBanner.jpg";
 import Movie from "../Movie";
 import "./Home.scss";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import OPBanner from "../../asset/images/OPBanner.jpg";
-import MuRomBanner from "../../asset/images/murombanner.png";
-import HPMBanner from "../../asset/images/HPMBanner.jpg";
 
 export default function Homepage() {
   let settings = {
@@ -39,10 +39,11 @@ export default function Homepage() {
                   </div>
                 </div>
               </div>
+
               <div className="promotion-box">
                 <div className="promotion__review-box">
                   <div className="box-item">
-                    <img className="box-item-img" src={HPMBanner} alt="" />
+                    <img className="box-item-img" src={AvatarBanner} alt="" />
                   </div>
                 </div>
               </div>

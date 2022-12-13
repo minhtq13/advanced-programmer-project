@@ -15,8 +15,6 @@ public interface UserRepository extends BaseRepository<User> {
     @Query(value = "from User user where user.username= ?1")
     List<User> findUsersByUsername(String username);
 
-    Optional<User> findByUsername(String username);
-
     @Modifying
     @Transactional
     @Query(value = "update User user set user.password= :password where user.username = :username")

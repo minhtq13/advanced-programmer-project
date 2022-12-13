@@ -23,7 +23,7 @@ public class TicketController extends BaseController<Ticket, TicketRepository> {
     }
 
     @GetMapping(path = "/findByRowAndColumn")
-    public ResponseEntity<?> findByRowAndColumn(@RequestParam(name="rowTicket", required = false) Integer rowTicket, @RequestParam(name="columnTicket",required = false) Integer columnTicket, HttpServletRequest request){
+    public ResponseEntity<?> findByRowAndColumn(@RequestParam(name="rowTicket", required = false) String rowTicket, @RequestParam(name="columnTicket",required = false) Integer columnTicket, HttpServletRequest request){
         return ResponseEntity.ok(repository.findTicketByRowAndColumn(rowTicket,columnTicket));
     }
     @GetMapping(path = "/findByUsers")
@@ -44,5 +44,10 @@ public class TicketController extends BaseController<Ticket, TicketRepository> {
     @GetMapping(path = "/findByFilm")
     public ResponseEntity<?> findByFilm(@RequestParam(name="nameFilm", required = false) String nameFilm, HttpServletRequest request){
         return ResponseEntity.ok(repository.findTicketByFilm(nameFilm));
+    }
+
+    @GetMapping(path = "/findByCinemaFilmRowColumn")
+    public ResponseEntity<?> findByCinemaFilmRowColumn(@RequestParam(name="nameCinema", required = false) String nameCinema, @RequestParam(name="nameFilm", required = false) String nameFilm, @RequestParam(name="rowTicket", required = false) String rowTicket, @RequestParam(name="columnTicket",required = false) Integer columnTicket, HttpServletRequest request){
+        return ResponseEntity.ok(repository.findTicketByCinemaFilmRowColumn(nameCinema, nameFilm, rowTicket, columnTicket));
     }
 }

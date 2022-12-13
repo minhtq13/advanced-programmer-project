@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface TicketRepository extends BaseRepository<Ticket> {
     @Query(value = "from Ticket ticket where ( ticket.rowTicket=?1 and ticket.columnTicket=?2)")
-    List<Ticket> findTicketByRowAndColumn(Integer rowTicket, Integer columnTicket);
+    List<Ticket> findTicketByRowAndColumn(String rowTicket, Integer columnTicket);
 
     @Query(value = "from Ticket ticket where ( ticket.nameUser=?1)")
     List<Ticket> findTicketByUser(String nameUser);
@@ -23,4 +23,7 @@ public interface TicketRepository extends BaseRepository<Ticket> {
 
     @Query(value = "from Ticket ticket where ( ticket.nameRoom=?1)")
     List<Ticket> findTicketByRoom(String nameRoom);
+
+    @Query(value = "from Ticket ticket where ( ticket.nameCinema=?1 and ticket.nameFilm=?2 and ticket.rowTicket=?3 and ticket.columnTicket=?4)")
+    List<Ticket> findTicketByCinemaFilmRowColumn(String nameCinema, String nameFilm, String rowTicket, Integer columnTicket);
 }

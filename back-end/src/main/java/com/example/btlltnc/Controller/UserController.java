@@ -36,11 +36,6 @@ public class UserController extends BaseController<User, UserRepository> {
         return ResponseEntity.ok(repository.findUsersByUsername(username));
     }
 
-    @GetMapping(path = "/findByUsernameAndType")
-    public ResponseEntity<?> findByUsernameAndType(@RequestParam(name = "username", required = false) String username, @RequestParam(name = "type", required = false) Integer type, HttpServletRequest request) {
-        return ResponseEntity.ok(repository.findByUsernameAndType(username, type));
-    }
-
     @PutMapping("/updatePassword")
     public void updatePassword(@RequestBody UserPasswordDTO userPasswordDTO) {
         String password = AES.encrypt(userPasswordDTO.getPassword());

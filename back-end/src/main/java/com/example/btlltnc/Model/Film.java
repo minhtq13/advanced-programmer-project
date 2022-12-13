@@ -17,9 +17,14 @@ public class Film extends BaseModel {
     private Integer duration;
     private String category;
     private String img;
-    private String link;
+    private StringBuilder link;
     private Integer age;
     private String type;
     private Integer hot;
     private String nameCinema;
+    private StringBuilder description;
+    private String director;
+    private StringBuilder actor;
+    private String language;
+    private String premiereDate;
 }

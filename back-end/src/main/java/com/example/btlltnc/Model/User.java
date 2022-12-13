@@ -11,7 +11,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import java.time.ZonedDateTime;
 import java.util.Collection;
 
 @Entity
@@ -25,8 +24,7 @@ public class User extends BaseModel implements UserDetails {
     private String phoneNumber;
     private String email;
     private Integer gender;
-    private ZonedDateTime birthday;
-    private Integer type;
+    private String birthday;
 
     public void setPassword(String password) {
         this.password = AES.encrypt(password);

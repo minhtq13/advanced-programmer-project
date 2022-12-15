@@ -4,6 +4,7 @@ import useCinema from "../../hooks/useCinema";
 import BTBacGiang from "../../asset/images/btbg.jpg";
 import { dataHotFilm } from "./data";
 import { useEffect } from "react";
+import AvatarFilm from "../../component/AvatarFilm/AvatarFilm";
 
 const Cinemas = () => {
   const { infoCinema, getInfoCinemaInCinamePage } = useCinema();
@@ -71,7 +72,12 @@ const Cinemas = () => {
           {dataHotFilm.map((film, index) => {
             return (
               <div key={index} className="film-item col-6">
-                <img src={film.img} alt="" />
+                <AvatarFilm
+                  image={film.img}
+                  width={237}
+                  height={384}
+                  borderRadius={20}
+                />
                 <div className="film-name">{film.title}</div>
               </div>
             );

@@ -22,11 +22,21 @@ const InfoUser = () => {
       <div style={{ display: "flex" }}>
         <div className="column1">
           <div className="content-item">
-            <div className="title">* Họ và tên</div>
+            <div className="title">
+              <span style={{ color: "red" }}>
+                <span style={{ color: "red" }}>*</span>
+              </span>
+              Họ và tên
+            </div>
             <Input className="input-member" placeholder="Họ và tên" />
           </div>
           <div className="content-item">
-            <div className="title">* Số điện thoại</div>
+            <div className="title">
+              <span style={{ color: "red" }}>
+                <span style={{ color: "red" }}>*</span>
+              </span>
+              Số điện thoại
+            </div>
             <Input
               prefix={<PhoneOutlined />}
               className="input-member"
@@ -34,7 +44,12 @@ const InfoUser = () => {
             />
           </div>
           <div className="content-item">
-            <div className="title">* Ngày sinh</div>
+            <div className="title">
+              <span style={{ color: "red" }}>
+                <span style={{ color: "red" }}>*</span>
+              </span>
+              Ngày sinh
+            </div>
             <DatePicker
               className="input-member"
               placement="bottomLeft"
@@ -48,7 +63,9 @@ const InfoUser = () => {
         </div>
         <div className="column2">
           <div className="content-item">
-            <div className="title">* Email</div>
+            <div className="title">
+              <span style={{ color: "red" }}>*</span> Email
+            </div>
             <Input
               prefix={<MailOutlined />}
               className="input-member"
@@ -57,7 +74,9 @@ const InfoUser = () => {
             />
           </div>
           <div className="content-item">
-            <div className="title">* CMND/Hộ chiếu</div>
+            <div className="title">
+              <span style={{ color: "red" }}>*</span> CMND/Hộ chiếu
+            </div>
             <Input
               prefix={<CreditCardOutlined />}
               className="input-member"

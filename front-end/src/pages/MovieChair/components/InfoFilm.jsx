@@ -12,6 +12,7 @@ import {
 } from "@ant-design/icons";
 import ButtonConfirm from "../../../component/ButtonConfirm/ButtonConfirm";
 import { useSelector } from "react-redux";
+import AvatarFilm from "../../../component/AvatarFilm/AvatarFilm";
 
 const InfoFilm = () => {
   const { chooseChair } = useSelector((state) => state.appReducer);
@@ -20,9 +21,7 @@ const InfoFilm = () => {
   return (
     <div className="wrapper-info-film">
       <div className="row1">
-        <div className="wrapper-img">
-          <img src={OPFlim} alt="" />
-        </div>
+        <AvatarFilm image={OPFlim} width={150} height={237} />
         <div className="name-animation">
           <div className="name">One Piece Film: Red</div>
           <div className="animation">2D Phụ đề</div>

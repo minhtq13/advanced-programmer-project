@@ -14,6 +14,7 @@ import javax.persistence.*;
 @Setter
 public class Film extends BaseModel {
     private String name;
+    private String nameFilm;
     private Integer duration;
     private String category;
     private String img;

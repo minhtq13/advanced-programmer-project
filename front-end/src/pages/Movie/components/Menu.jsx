@@ -1,15 +1,31 @@
 import React from "react";
-import ButtonBuyTicket from "../../../component/ButtonBuyTicket/ButtonBuyTicket";
+import { useEffect } from "react";
 import "./Menu.scss";
+import useFilm from "../../../hooks/useFilm";
+import ButtonBuyTicket from "../../../component/ButtonBuyTicket/ButtonBuyTicket";
+import AvatarFilm from "../../../component/AvatarFilm/AvatarFilm";
 
 const Menu = ({ items }) => {
+  const { infoFilm, getInfoFilmInFilmPage } = useFilm();
+  useEffect(() => {
+    if (infoFilm) {
+      getInfoFilmInFilmPage();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div className="wrapper-movie-item">
       {items.map((item) => {
         const { id, title, img, vibe, time, date } = item;
         return (
           <div className="movie-item" key={id}>
-            <img src={img} alt="" className="movie-img" />
+            <AvatarFilm
+              image={img}
+              width={227.5}
+              height={360}
+              borderRadius={12}
+            />
             <div className="info-movie">
               <div className="title-movie">{title}</div>
               <div className="desc-movie">

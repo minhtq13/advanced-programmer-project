@@ -13,7 +13,6 @@ const Menu = ({ items }) => {
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-    console.log(infoFilm);
 
     return (
         <div className="wrapper-movie-item">

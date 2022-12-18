@@ -18,4 +18,7 @@ public interface FilmRepository  extends BaseRepository<Film> {
 
     @Query(value="from Film film where (film.nameCinema= ?1 and film.name= ?2)")
     List<Film> findFilmsByNameCinemaAndName(String nameCinema, String name);
+
+    @Query(value="from Film film where (film.nameCinema= ?1 and film.type= ?2)")
+    List<Film> findFilmsByNameCinemaAndType(String nameCinema, String type);
 }

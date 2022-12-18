@@ -11,4 +11,10 @@ import java.util.List;
 public interface ScheduleRepository extends BaseRepository<Schedule> {
     @Query(value = "from Schedule schedule where schedule.nameFilm=?1")
     List<Schedule> findScheduleByNameFilm(String nameFilm);
+
+    @Query(value = "from Schedule schedule where (schedule.nameCinema= ?1 and schedule.day=?2)")
+    List<Schedule> findScheduleByNameCinemaAndDay(String nameCinema, String day);
+
+    @Query(value = "from Schedule schedule where (schedule.nameCinema= ?1)")
+    List<Schedule> findScheduleByNameCinema(String nameCinema);
 }

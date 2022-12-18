@@ -25,4 +25,14 @@ public class ScheduleController extends BaseController<Schedule, ScheduleReposit
     public ResponseEntity<?> findByNameFilmAndNameRoom(@RequestParam(name="nameFilm", required = false) String nameFilm, HttpServletRequest request){
         return ResponseEntity.ok(repository.findScheduleByNameFilm(nameFilm));
     }
+
+    @GetMapping(path = "/findByNameCinemaAndDay")
+    public ResponseEntity<?> findByNameCinemaAndDay(@RequestParam(name="nameCinema", required = false) String nameCinema, @RequestParam(name="day", required = false) String day, HttpServletRequest request){
+        return ResponseEntity.ok(repository.findScheduleByNameCinemaAndDay(nameCinema, day));
+    }
+
+    @GetMapping(path = "/findByNameCinema")
+    public ResponseEntity<?> findByNameCinema(@RequestParam(name="nameCinema", required = false) String nameCinema, HttpServletRequest request){
+        return ResponseEntity.ok(repository.findScheduleByNameCinema(nameCinema));
+    }
 }

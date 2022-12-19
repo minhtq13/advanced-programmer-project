@@ -1,26 +1,34 @@
-import { useState } from "react";
-import { WrapperStyled } from "./styled";
-import items from "./data";
-import MenuMovie from "./components/Menu";
+import { useEffect, useState } from "react";
+import useFilm from "../../hooks/useFilm";
 import Categories from "./components/Categories";
-import { useEffect } from "react";
-
-const allCategories = [...new Set(items.map((item) => item.category))];
+import MenuMovie from "./components/Menu";
+import { WrapperStyled } from "./styled";
 
 export default function Movie() {
-    const [menuItems, setMenuItems] = useState(items);
+    const { infoFilm, getInfoFilmInFilmPage } = useFilm();
+    useEffect(() => {
+        if (infoFilm) {
+            getInfoFilmInFilmPage();
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+    // const allCategories = [...new Set(infoFilm.map((item) => item.type))];
+    // console.log(allCategories);
+    const [menuItems, setMenuItems] = useState(infoFilm);
     // eslint-disable-next-line no-unused-vars
-    const [categories, setCategories] = useState(allCategories);
+    const [categories, setCategories] = useState(["psc", "pdc", "scdb"]);
 
     const filterItems = (category) => {
-        const newItems = items.filter((item) => item.category === category);
+        const newItems = infoFilm.filter((item) => item.type === category);
         setMenuItems(newItems);
     };
 
     useEffect(() => {
-        const newItems = items.filter((item) => item.category === "upcoming");
+        const newItems = infoFilm.filter((item) => item.type === "psc");
         setMenuItems(newItems);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
+    console.log(menuItems);
 
     return (
         <WrapperStyled>

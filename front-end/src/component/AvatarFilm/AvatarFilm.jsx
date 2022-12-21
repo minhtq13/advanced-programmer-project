@@ -13,7 +13,7 @@ const AvatarFilm = ({ width, height, image, borderRadius }) => {
             }}
         >
             <img
-                src={image}
+                src={require(`../../asset/images/${image}`)}
                 alt="Avatar Film"
                 style={{ borderRadius: `${borderRadius}px` }}
             />

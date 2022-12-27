@@ -10,14 +10,14 @@ import java.util.List;
 
 @Repository
 public interface FilmRepository  extends BaseRepository<Film> {
-    @Query(value="from Film film where film.name= ?1")
-    List<Film> findFilmsByName(String name);
+    @Query(value="from Film film where film.nameFilm= ?1")
+    List<Film> findFilmsByNameFilm(String nameFilm);
 
     @Query(value="from Film film where film.nameCinema= ?1")
     List<Film> findFilmsByNameCinema(String nameCinema);
 
-    @Query(value="from Film film where (film.nameCinema= ?1 and film.name= ?2)")
-    List<Film> findFilmsByNameCinemaAndName(String nameCinema, String name);
+    @Query(value="from Film film where (film.nameCinema= ?1 and film.nameFilm= ?2)")
+    List<Film> findFilmsByNameCinemaAndNameFilm(String nameCinema, String name);
 
     @Query(value="from Film film where (film.nameCinema= ?1 and film.type= ?2)")
     List<Film> findFilmsByNameCinemaAndType(String nameCinema, String type);

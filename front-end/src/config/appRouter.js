@@ -21,7 +21,8 @@ const publicRoutes = [
   { path: appPath.login, component: Account },
 
   // private routes
-  { path: appPath.movieChair, component: MovieChair, isPrivateRouter: true },
+  // { path: appPath.movieChair, component: MovieChair, isPrivateRouter: true },
+  { path: appPath.movieChair, component: MovieChair },
 ];
 
 const privateRoutes = [];

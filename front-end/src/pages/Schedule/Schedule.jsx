@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import dataSchedule from "./components/dataSchedule";
-
 import ContentDay from "./components/ContentDay";
 import "./Schedule.scss";
 

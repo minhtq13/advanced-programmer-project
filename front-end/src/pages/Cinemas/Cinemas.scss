@@ -4,7 +4,7 @@
   .left-panel {
     .cinema-name {
       font-size: 30px;
-      font-weight: 600;
+      font-weight: 500;
     }
     .cinema-img {
       margin: 20px 0px;
@@ -20,17 +20,17 @@
       .paragraph {
         margin-bottom: 16px;
         span {
-          font-weight: 600;
+          font-weight: 500;
         }
       }
     }
     .cinema-footer {
       .address {
-        font-weight: 600;
+        font-weight: 500;
       }
       .phone {
         margin: 12px 0px;
-        font-weight: 600;
+        font-weight: 500;
         span {
           color: #337ab7;
           cursor: pointer;
@@ -41,10 +41,10 @@
       }
       .sale {
         .sale1 {
-          font-weight: 600;
+          font-weight: 500;
         }
         .sale2 {
-          font-weight: 600;
+          font-weight: 500;
           color: #337ab7;
           cursor: pointer;
         }
@@ -74,7 +74,7 @@
           color: #337ab7;
           font-size: 18px;
           cursor: pointer;
-          font-weight: 600;
+          font-weight: 500;
         }
         .film-name:hover {
           text-decoration: underline;

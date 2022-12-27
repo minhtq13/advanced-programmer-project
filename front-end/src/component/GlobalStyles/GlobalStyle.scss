@@ -1,5 +1,6 @@
 @import "normalize.css";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap");
 
 :root {
   --width-content: 1150px;
@@ -42,7 +43,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   line-height: 22px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 // fix empty right space react-slick
@@ -62,7 +63,7 @@ body {
 }
 // font-weight
 .text-bold {
-  font-weight: 600;
+  font-weight: 500;
 }
 a {
   color: rgb(90, 86, 86);

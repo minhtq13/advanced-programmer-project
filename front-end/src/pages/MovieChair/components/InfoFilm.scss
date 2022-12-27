@@ -13,7 +13,7 @@
         color: var(--name-film-color);
       }
       .animation {
-        font-weight: 600;
+        font-weight: 500;
         font-size: 18px;
         margin-left: 16px;
       }
@@ -32,7 +32,7 @@
         min-width: 150px;
       }
       .detail {
-        font-weight: 600;
+        font-weight: 500;
         flex-wrap: wrap;
         .chair-name::after {
           content: ",";

@@ -1,16 +1,9 @@
-.movie-schedule {
+.options-day {
   display: flex;
   flex-wrap: wrap;
   .movie-item-schedule {
     margin-top: 30px;
     display: flex;
-    img {
-      width: 248px;
-      height: 392px;
-      border-radius: 20px;
-      margin-right: 12px;
-    }
-
     .tag-time {
       display: flex;
     }
@@ -21,6 +14,7 @@
       font-weight: bold;
       color: var(--name-film-color);
       line-height: 1.2;
+      min-height: 72px;
     }
     .tag-time {
       margin: 12px;

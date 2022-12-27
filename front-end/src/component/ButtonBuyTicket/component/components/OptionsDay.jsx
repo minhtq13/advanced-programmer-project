@@ -1,24 +1,24 @@
 import React from "react";
 import TimeItem from "../../../TimeItem/TimeItem";
-import dataDay1 from "./dataDay1";
-import "./Day.scss";
+import "./OptionsDay.scss";
 
-const Day1 = () => {
+const OptionsDay = ({ data }) => {
   return (
-    <div className="movie-schedule">
-      {dataDay1.map((data, index) => {
+    <div className="options-day">
+      {data.dataFilm.map((film, index) => {
         return (
           <div className="movie-item-schedule col-6" key={index}>
             <div className="detail">
-              <div className="film-name">{data.title}</div>
+              <div className="film-name">{film.title}</div>
               <div className="desc">
-                <div className="animation">{data.animation}</div>
+                <div className="animation">{film.animation}</div>
                 <div className="wrapper-list-time">
-                  {data.children.map((time, index) => {
+                  {film.children.map((time, index) => {
                     return (
                       <div className="list-time" key={index}>
                         <TimeItem
-                          nameFilm={data.title}
+                          date={data.title}
+                          nameFilm={film.title}
                           timeItem={time.time}
                           emptyChair={time.emptyChair}
                         />
@@ -35,4 +35,4 @@ const Day1 = () => {
   );
 };
 
-export default Day1;
+export default OptionsDay;

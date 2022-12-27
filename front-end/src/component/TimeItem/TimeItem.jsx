@@ -1,15 +1,11 @@
 import { Modal } from "antd";
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import ButtonConfirm from "../ButtonConfirm/ButtonConfirm";
 import "./TimeItem.scss";
 
-const TimeItem = ({ timeItem, emptyChair, nameFilm }) => {
+const TimeItem = ({ timeItem, emptyChair, nameFilm, date }) => {
   const navigate = useNavigate();
-  const { dateMovie } = useSelector((state) => state.appReducer);
-  // eslint-disable-next-line no-unused-vars
-  const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
   const showModal = () => {
     setOpen(true);
@@ -25,6 +21,7 @@ const TimeItem = ({ timeItem, emptyChair, nameFilm }) => {
   return (
     <div className="wrapper-time-item" onClick={showModal}>
       <div className="time-item">{timeItem}</div>
+      <div className="empty-chair">{emptyChair} ghế trống</div>
       <Modal
         className="modal-time-item"
         title="BẠN ĐANG ĐẶT VÉ XEM PHIM"
@@ -44,13 +41,12 @@ const TimeItem = ({ timeItem, emptyChair, nameFilm }) => {
             <div className="tabs-item">Giờ chiếu</div>
           </div>
           <div className="info-film">
-            <div className="info-film-item">Beta Bắc Giang</div>
-            <div className="info-film-item">{dateMovie}</div>
+            <div className="info-film-item">Beta Thanh Xuân</div>
+            <div className="info-film-item">{date}</div>
             <div className="info-film-item">{timeItem}</div>
           </div>
         </div>
       </Modal>
-      <div className="empty-chair">{emptyChair} ghế trống</div>
     </div>
   );
 };

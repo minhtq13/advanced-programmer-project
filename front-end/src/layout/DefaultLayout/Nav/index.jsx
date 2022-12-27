@@ -5,6 +5,7 @@ import { Menu } from "antd";
 import { AppstoreOutlined } from "@ant-design/icons";
 import MenuAccount from "../../../component/MenuAccount/MenuAccount";
 import "./index.scss";
+import SubMenuNav from "../../../component/SubMenuNav/SubMenuNav";
 export default function Nav() {
   const [cinemaName, setCinemaName] = useState("Beta Thanh Xuân");
   function getItem(label, key, icon, children, type) {
@@ -46,7 +47,7 @@ export default function Nav() {
             </div>
           </Link>
 
-          <Menu
+          {/* <Menu
             onClick={handleClick}
             className="menu-cinemas"
             style={{
@@ -54,7 +55,8 @@ export default function Nav() {
             }}
             mode="vertical"
             items={items}
-          />
+          /> */}
+          <SubMenuNav />
           <div className="nav-content">
             <Link to="/home" className="nav-links">
               TRANG CHỦ

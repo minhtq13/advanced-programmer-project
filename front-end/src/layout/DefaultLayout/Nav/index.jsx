@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logoBeta from "../../../asset/images/logoBeta.png";
 import { Menu } from "antd";
 import { AppstoreOutlined } from "@ant-design/icons";
@@ -7,6 +8,7 @@ import MenuAccount from "../../../component/MenuAccount/MenuAccount";
 import "./index.scss";
 // eslint-disable-next-line no-unused-vars
 import SubMenuNav from "../../../component/SubMenuNav/SubMenuNav";
+import DropDownSubMenu from "../../../component/DropDownSubMenu/DropDownSubMenu";
 export default function Nav() {
     const [cinemaName, setCinemaName] = useState("Beta Thanh Xuân");
     function getItem(label, key, icon, children, type) {
@@ -50,7 +52,7 @@ export default function Nav() {
                         </div>
                     </Link>
 
-                    <Menu
+                    {/* <Menu
                         onClick={handleClick}
                         className="menu-cinemas"
                         style={{
@@ -59,36 +61,37 @@ export default function Nav() {
                         mode="vertical"
                         items={items}
                     />
-                    {/* <SubMenuNav /> */}
+                    <SubMenuNav /> */}
+                    <DropDownSubMenu />
                     <div className="nav-content">
-                        <Link to="/home" className="nav-links">
+                        <NavLink to="/home" className="nav-links">
                             TRANG CHỦ
-                        </Link>
+                        </NavLink>
                     </div>
                     <div className="nav-content">
-                        <Link to="/schedule" className="nav-links">
+                        <NavLink to="/schedule" className="nav-links">
                             LỊCH CHIẾU THEO RẠP
-                        </Link>
+                        </NavLink>
                     </div>
                     <div className="nav-content">
-                        <Link to="/movie" className="nav-links">
+                        <NavLink to="/movie" className="nav-links">
                             PHIM
-                        </Link>
+                        </NavLink>
                     </div>
                     <div className="nav-content">
-                        <Link to="/cinemas" className="nav-links">
+                        <NavLink to="/cinemas" className="nav-links">
                             RẠP
-                        </Link>
+                        </NavLink>
                     </div>
                     <div className="nav-content">
-                        <Link to="/price" className="nav-links">
+                        <NavLink to="/price" className="nav-links">
                             GIÁ VÉ
-                        </Link>
+                        </NavLink>
                     </div>
                     <div className="nav-content">
-                        <Link to="/member" className="nav-links">
+                        <NavLink to="/member" className="nav-links">
                             THÀNH VIÊN
-                        </Link>
+                        </NavLink>
                     </div>
                 </div>
             </nav>

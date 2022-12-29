@@ -9,4 +9,5 @@ export const appPath = {
     member: "/member",
     login: "/login",
     movieChair: "/movie-chair",
+    detailFilm: "/detail-film",
 };

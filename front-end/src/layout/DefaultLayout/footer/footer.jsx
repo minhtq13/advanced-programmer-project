@@ -7,11 +7,13 @@ import { dataColumn1, dataColumn2, dataColumn3 } from "./data";
 import Phone from "../../../asset/images/phone.png";
 import logoBeta from "../../../asset/images/logoBeta.png";
 import DaThongBao from "../../../asset/images/dathongbao.png";
+// import SubMenuNav from "../../../component/SubMenuNav/SubMenuNav";
 
 const footer = () => {
     return (
         <div>
             <div>
+                {/* <SubMenuNav /> */}
                 <footer className="footer">
                     <div className="grid" style={{ width: "1150px" }}>
                         <div className="grid__row">

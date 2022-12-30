@@ -8,18 +8,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    // text-align: center;
     height: 600px;
     width: 287px;
     padding: 0 24px 24px 24px;
-    // img {
-    //   width: 227.5px;
-    //   height: 360px;
-    //   border-radius: 12px;
-    // }
     .info-movie {
+      width: 100%;
+      flex-direction: column;
+      text-align: left;
       .detail {
-        // margin-left: 24px;
         display: flex;
         .options {
           font-weight: 500;
@@ -30,12 +27,22 @@
         }
       }
       .title-movie {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
         min-height: 44px;
         font-size: 22px;
         font-weight: 500;
         color: #337ab7;
         cursor: pointer;
         margin: 12px 0;
+        div {
+          line-height: 1.1;
+        }
+      }
+      .title-movie:hover {
+        text-decoration: underline;
       }
     }
     .buy-ticket {

@@ -1,0 +1,41 @@
+.wrapper-detail-film {
+  padding-top: 30px;
+  min-height: 600px;
+  .header {
+    font-size: 26px;
+    // color: #337ab7;
+    margin-bottom: 50px;
+    span {
+      color: #337ab7;
+    }
+  }
+  .content {
+    display: flex;
+    .desc-film {
+      margin-left: 30px;
+      .header-desc {
+        h1 {
+          font-size: 36px;
+          margin-bottom: 30px;
+        }
+        p {
+          font-family: sans-serif;
+        }
+      }
+      .content-desc {
+        .content-item {
+          display: flex;
+          margin-bottom: 12px;
+          .left {
+            font-size: 20px;
+            min-width: 250px;
+          }
+          .right {
+            font-family: sans-serif;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

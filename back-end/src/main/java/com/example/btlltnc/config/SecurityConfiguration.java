@@ -47,6 +47,7 @@ public class SecurityConfiguration {
                 .antMatchers("/auth/login")
                 .antMatchers("/cinema")
                 .antMatchers("/film")
+                .antMatchers("/film/findByNameCinema")
                 .antMatchers("/schedule");
     }
 

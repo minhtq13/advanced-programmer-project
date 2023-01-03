@@ -1,16 +1,16 @@
 .wrapper-default-layout {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .container-content {
-        width: var(--width-content);
-        min-height: 500px;
-        margin-top: var(--margin-top-content);
-        padding-bottom: var(--padding-bottom-content);
-    }
-    .line-footer {
-        border-top: 2px solid #ccc;
-        width: 100%;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .container-content {
+    width: var(--width-content);
+    min-height: 500px;
+    margin-top: var(--margin-top-content);
+    padding-bottom: var(--padding-bottom-content);
+  }
+  .line-footer {
+    border-top: 2px solid #ccc;
+    width: 100%;
+  }
 }

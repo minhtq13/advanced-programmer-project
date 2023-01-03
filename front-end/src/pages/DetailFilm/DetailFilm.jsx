@@ -9,7 +9,9 @@ const DetailFilm = () => {
   return (
     <div className="wrapper-detail-film">
       <div className="header text-bold">
-        Trang chủ &gt; <span> {detailFilm.name}</span>
+        <a href="/home">Trang chủ </a>
+        &gt;
+        <span> {detailFilm.name}</span>
       </div>
       <div className="content">
         <div>

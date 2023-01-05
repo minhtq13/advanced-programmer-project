@@ -1,9 +1,20 @@
 import { ClockCircleOutlined, TagsOutlined } from "@ant-design/icons";
-import React from "react";
+import React, { useEffect } from "react";
 import AvatarFilm from "../../../component/AvatarFilm/AvatarFilm";
 import TimeItem from "../../../component/TimeItem/TimeItem";
+import useSchedule from "../../../hooks/useSchedule";
 import "./ContentDay.scss";
 const ContentDay = ({ data }) => {
+  const { infoSchedule, getInfoSchedule } = useSchedule();
+
+  useEffect(() => {
+    if (infoSchedule) {
+      getInfoSchedule();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  console.log(infoSchedule);
+
   return (
     <div className="movie-schedule">
       {data.dataFilm.map((film, index) => {

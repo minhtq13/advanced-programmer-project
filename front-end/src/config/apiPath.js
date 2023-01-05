@@ -5,11 +5,13 @@ export const apiPath = {
   // Account
   login: BASE_URL + "/api/user/login", // url api login
   register: BASE_URL + "/api/user/signup", // url api register
-  // film
+  // Film
   getFilmByNameCinema: BASE_URL + "/film/findByNameCinema",
   getFilmByName: BASE_URL + "/film/findByName?name",
   getInfoCinema: BASE_URL + "/cinema",
   getInfoTickets: BASE_URL + "/tickets",
   getInfoUser: BASE_URL + "/users",
   getInfoFilm: BASE_URL + "/film",
+  // Schedule
+  getInfoSchedule: BASE_URL + "/schedule",
 };

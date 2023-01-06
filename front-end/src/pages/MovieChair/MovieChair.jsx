@@ -5,13 +5,13 @@ import InfoFilm from "./components/InfoFilm";
 import "./MovieChair.scss";
 const MovieChair = () => {
   // eslint-disable-next-line no-unused-vars
-  const { infoTicket, getInfoTicketsInMultiPage } = useTickets();
-  useEffect(() => {
-    if (infoTicket) {
-      getInfoTicketsInMultiPage();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  // const { infoTicket, getInfoTicketsInMultiPage } = useTickets();
+  // useEffect(() => {
+  //   if (infoTicket) {
+  //     getInfoTicketsInMultiPage();
+  //   }
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   return (
     <div className="wrapper-movie-chair">

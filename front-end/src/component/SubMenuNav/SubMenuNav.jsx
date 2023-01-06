@@ -1,17 +1,108 @@
 import { DownOutlined, RightOutlined } from "@ant-design/icons";
 import React from "react";
+import { useState } from "react";
 import "./SubMenuNav.scss";
 
+const dataSubmenu = [
+  {
+    id: 1,
+    title: "Hà Nội",
+    submenu: [
+      {
+        id: 1,
+        title: "Beta Thanh Xuân",
+      },
+      {
+        id: 2,
+        title: "Beta Mỹ Đình",
+      },
+      {
+        id: 3,
+        title: "Beta Đan Phượng",
+      },
+      {
+        id: 4,
+        title: "Beta Giải Phóng",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "TP. Hồ Chí Minh",
+    submenu: [
+      {
+        id: 1,
+        title: "Beta Quang Trung",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Bắc Giang",
+    submenu: [
+      {
+        id: 1,
+        title: "Beta Bắc Giang",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Đồng Nai",
+    submenu: [
+      {
+        id: 1,
+        title: "Beta Đồng Nai",
+      },
+      {
+        id: 2,
+        title: "Beta Long Khánh",
+      },
+      {
+        id: 3,
+        title: "Beta Long Thành",
+      },
+    ],
+  },
+];
+
 const SubMenuNav = () => {
+  const [nameCinema, setNameCinema] = useState("Beta Thanh Xuân");
+
   return (
     <div className="wrapper-sub-menu">
-      <ul class="menu">
-        <li>
+      <ul className="menu">
+        <li className="test">
           <a className="name-cinema" href="#!">
-            <span>Beta Thanh Xuân</span>
+            <span>{nameCinema}</span>
             <DownOutlined />
           </a>
-          <ul style={{ position: "absolute" }} class="sub-menu">
+          <ul className="sub-menu">
+            {dataSubmenu.map((data, index) => {
+              return (
+                <li key={index}>
+                  <a className="menu1" href="#!">
+                    <span>{data.title}</span>
+                    <RightOutlined />
+                  </a>
+                  <ul className="sub-menu">
+                    {data.submenu.map((menu1, index) => {
+                      return (
+                        <li
+                          key={index}
+                          onClick={() => setNameCinema(menu1.title)}
+                        >
+                          <a href="#!">{menu1.title}</a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </li>
+              );
+            })}
+          </ul>
+
+          {/* <ul class="sub-menu">
             <li>
               <a className="menu1" href="#!">
                 <span>Hà Nội</span>
@@ -71,7 +162,7 @@ const SubMenuNav = () => {
                 </li>
               </ul>
             </li>
-          </ul>
+          </ul> */}
         </li>
       </ul>
     </div>

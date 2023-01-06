@@ -71,8 +71,10 @@ const InfoFilm = () => {
             <PicCenterOutlined /> Ghế ngồi
           </div>
           <div style={{ display: "flex" }} className="detail">
-            {chooseChair?.map((chair) => (
-              <div className="chair-name">{chair.value}</div>
+            {chooseChair?.map((chair, index) => (
+              <div className="chair-name" key={index}>
+                {chair.value}
+              </div>
             ))}
           </div>
         </div>

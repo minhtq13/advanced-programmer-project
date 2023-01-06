@@ -17,7 +17,6 @@ export default function Movie() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  console.log(infoFilmByCinema);
 
   const [menuItems, setMenuItems] = useState(infoFilmByCinema);
 

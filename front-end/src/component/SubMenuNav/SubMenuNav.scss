@@ -55,7 +55,7 @@
   }
 
   .sub-menu .sub-menu {
-    left: 105%;
+    left: 100%;
     top: 0;
     display: none;
   }
@@ -78,5 +78,8 @@
     svg {
       font-size: 12px;
     }
+  }
+  .test {
+    min-width: 200px;
   }
 }

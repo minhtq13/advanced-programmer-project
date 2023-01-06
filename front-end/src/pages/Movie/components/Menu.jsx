@@ -15,10 +15,10 @@ const Menu = ({ items }) => {
   // };
   return (
     <div className="wrapper-movie-item">
-      {items.map((item) => {
-        const { id, name, img, category, duration, premiereDate } = item;
+      {items.map((item, index) => {
+        const { name, img, category, duration, premiereDate } = item;
         return (
-          <div className="movie-item" key={id}>
+          <div className="movie-item" key={index}>
             <div>
               <AvatarFilm
                 image={img}

@@ -13,7 +13,6 @@ const ContentDay = ({ data }) => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  console.log(infoSchedule);
 
   return (
     <div className="movie-schedule">

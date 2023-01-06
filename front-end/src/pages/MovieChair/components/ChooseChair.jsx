@@ -69,9 +69,9 @@ const ChooseChair = () => {
         Trang chủ &gt; Đặt vé &gt; <span> One Piece Film: Red</span>
       </div>
       <div className="type-of-chair">
-        {dataTypeOfChair.map((chair) => {
+        {dataTypeOfChair.map((chair, index) => {
           return (
-            <div className="seat-item">
+            <div className="seat-item" key={index}>
               <img src={chair.img} alt="" />
               <div className="seat-status-text">{chair.text}</div>
             </div>

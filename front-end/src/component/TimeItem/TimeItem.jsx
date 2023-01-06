@@ -5,6 +5,8 @@ import ButtonConfirm from "../ButtonConfirm/ButtonConfirm";
 import "./TimeItem.scss";
 
 const TimeItem = ({ timeItem, emptyChair, nameFilm, date }) => {
+  // const infoMovieChair = { timeItem, emptyChair, nameFilm, date };
+
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const showModal = () => {

@@ -6,6 +6,7 @@ const OptionsDay = ({ data }) => {
   return (
     <div className="options-day">
       {data.dataFilm.map((film, index) => {
+        console.log(film);
         return (
           <div className="movie-item-schedule col-6" key={index}>
             <div className="detail">

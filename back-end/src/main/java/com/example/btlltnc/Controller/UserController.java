@@ -15,7 +15,8 @@ import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @RequestMapping(value = "/users")
-@CrossOrigin(allowedHeaders = "*")
+@CrossOrigin("http://localhost:3000/")
+//@CrossOrigin(allowedHeaders = "*")
 public class UserController extends BaseController<User, UserRepository> {
     @Autowired
     public UserRepository repository;
@@ -39,6 +40,6 @@ public class UserController extends BaseController<User, UserRepository> {
     @PutMapping("/updatePassword")
     public void updatePassword(@RequestBody UserPasswordDTO userPasswordDTO) {
         String password = AES.encrypt(userPasswordDTO.getPassword());
-        repository.updatePasswordByUsername(userPasswordDTO.getUserName(), password);
+        repository.updatePasswordByUsername(userPasswordDTO.getUsername(), password);
     }
 }

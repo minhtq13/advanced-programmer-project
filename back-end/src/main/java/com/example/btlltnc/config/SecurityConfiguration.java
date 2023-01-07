@@ -45,10 +45,13 @@ public class SecurityConfiguration {
     public WebSecurityCustomizer webSecurityCustomizer() {
         return (web) -> web.ignoring()
                 .antMatchers("/auth/login")
+                .antMatchers("/users/**")
                 .antMatchers("/cinema")
                 .antMatchers("/film")
                 .antMatchers("/film/findByNameCinema")
-                .antMatchers("/schedule");
+                .antMatchers("/schedule")
+                        .antMatchers("/schedule/findByNameCinemaAndDay");
+
     }
 
     @Bean

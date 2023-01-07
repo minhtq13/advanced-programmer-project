@@ -23,6 +23,5 @@ public interface UserRepository extends BaseRepository<User> {
     void updatePasswordByUsername(String username, String password);
 
     @Query(value = "from User user where (user.username=?1 and user.password=?2)")
-    List<User> findByUsernameAndPassword(String username, String password);
-
+    User findByUsernameAndPassword(String username, String password);
 }

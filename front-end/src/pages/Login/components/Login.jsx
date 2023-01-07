@@ -2,11 +2,19 @@
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Form, Input } from "antd";
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import useUsers from "../../../hooks/useUsers";
 import "./Login.scss";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const { getToken, getUserInfo } = useUsers();
   const onFinish = (values) => {
-    console.log("Received values of form: ", values);
+    getToken(values);
+    if (localStorage.getItem("_token")) {
+      getUserInfo(values);
+      navigate("/home");
+    }
   };
 
   return (
@@ -22,7 +30,7 @@ const Login = () => {
         <div className="header-email title">Email</div>
         <Form.Item
           className="form-email"
-          name="email"
+          name="username"
           rules={[
             {
               required: true,

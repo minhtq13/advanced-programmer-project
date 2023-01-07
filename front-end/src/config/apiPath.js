@@ -3,7 +3,8 @@ export const BASE_URL = "http://localhost:8080";
 
 export const apiPath = {
   // Account
-  login: BASE_URL + "/api/user/login", // url api login
+  login: BASE_URL + "/auth/login", // url api login
+  getUser: BASE_URL + "/users/findByUsernameAndPassword",
   register: BASE_URL + "/api/user/signup", // url api register
   // Film
   getFilmByNameCinema: BASE_URL + "/film/findByNameCinema",
@@ -13,5 +14,6 @@ export const apiPath = {
   getInfoUser: BASE_URL + "/users",
   getInfoFilm: BASE_URL + "/film",
   // Schedule
-  getInfoSchedule: BASE_URL + "/schedule",
+  getInfoAllSchedule: BASE_URL + "/schedule",
+  getInfoSchedule: BASE_URL + "/schedule/findByNameCinemaAndDay",
 };

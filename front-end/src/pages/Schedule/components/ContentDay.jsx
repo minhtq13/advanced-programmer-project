@@ -9,10 +9,14 @@ const ContentDay = ({ data }) => {
 
   useEffect(() => {
     if (infoSchedule) {
-      getInfoSchedule();
+      getInfoSchedule({
+        nameCinema: "bttx",
+        day: "1/2-T4",
+      });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  console.log(infoSchedule);
 
   return (
     <div className="movie-schedule">

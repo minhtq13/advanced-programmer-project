@@ -1,5 +1,18 @@
 import { getRequest } from "../api/apiCaller";
 import { apiPath } from "../config/apiPath";
+export const getInfoAllScheduleService = async (
+  params,
+  successCallback,
+  errorCallback
+) => {
+  await getRequest(
+    `${apiPath.getInfoAllSchedule}`,
+    params,
+    successCallback,
+    errorCallback,
+    3000
+  );
+};
 export const getInfoScheduleService = async (
   params,
   successCallback,

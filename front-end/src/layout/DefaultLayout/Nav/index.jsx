@@ -8,7 +8,6 @@ import MenuAccount from "../../../component/MenuAccount/MenuAccount";
 import "./index.scss";
 // eslint-disable-next-line no-unused-vars
 import SubMenuNav from "../../../component/SubMenuNav/SubMenuNav";
-import DropDownSubMenu from "../../../component/DropDownSubMenu/DropDownSubMenu";
 export default function Nav() {
   return (
     <div className="wrapper-header">
@@ -20,7 +19,6 @@ export default function Nav() {
             </div>
           </Link>
           <SubMenuNav />
-          {/* <DropDownSubMenu /> */}
           <div className="nav-content">
             <NavLink to="/home" className="nav-links">
               TRANG CHỦ

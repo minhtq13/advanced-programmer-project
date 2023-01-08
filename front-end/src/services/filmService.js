@@ -22,3 +22,16 @@ export const getInfoFilmByNameCinemaService = async (
     3000
   );
 };
+export const getInfoFilmByNameFilmService = async (
+  params,
+  successCallback,
+  errorCallback
+) => {
+  await getRequest(
+    `${apiPath.getFilmByNameFilm}`,
+    params,
+    successCallback,
+    errorCallback,
+    3000
+  );
+};

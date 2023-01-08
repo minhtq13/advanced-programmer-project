@@ -1,14 +1,20 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setListDetailFilm } from "../redux/slices/appSlice";
 import {
   getInfoFilm,
   getInfoFilmByNameCinemaService,
+  getInfoFilmByNameFilmService,
 } from "../services/filmService";
 import useNotify from "./useNotify";
 
 const useFilm = () => {
+  const [listFilm, setListFilm] = useState([]);
+  const list = [];
   const notify = useNotify();
   const [infoFilm, setInfoFilm] = useState([]);
   const [infoFilmByCinema, setInfoFilmByCinema] = useState([]);
+  const [infoFilmByNameFilm, setInfoFilmByNameFilm] = useState([]);
   const getInfoFilmInFilmPage = (payload = {}) => {
     getInfoFilm(
       payload,
@@ -37,12 +43,35 @@ const useFilm = () => {
       }
     );
   };
+  const getInfoFilmByNameFilm = (data) => {
+    for (let i = 0; i < data.length; i++) {
+      getInfoFilmByNameFilmService(
+        {
+          nameFilm: data[i]?.nameFilm,
+        },
+        (res) => {
+          list.push(res.data[0]);
+          // setInfoFilmByNameFilm(res.data);
+        },
+        (err) => {
+          console.log(err.response);
+          if (err.response.status === 401) {
+            notify.warning(err.response.data.message || "Permission denied");
+          }
+        }
+      );
+    }
+    setListFilm(list);
+  };
 
   return {
+    listFilm,
     infoFilm,
     getInfoFilmInFilmPage,
     infoFilmByCinema,
     getInfoFilmByNameCinema,
+    infoFilmByNameFilm,
+    getInfoFilmByNameFilm,
   };
 };
 

@@ -9,10 +9,7 @@ import { setDetailFilm } from "../../../redux/slices/appSlice";
 const Menu = ({ items }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  // const handleOnClick = () => {
-  //     navigate("/detail-film");
-  //     dispatch(setDetailFilm(item));
-  // };
+
   return (
     <div className="wrapper-movie-item">
       {items.map((item, index) => {

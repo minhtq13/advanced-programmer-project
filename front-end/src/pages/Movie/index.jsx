@@ -31,7 +31,6 @@ export default function Movie() {
       setMenuItems(newItems);
     }
   }, [infoFilmByCinema]);
-  //   console.log(infoFilm);
 
   return (
     <WrapperStyled>

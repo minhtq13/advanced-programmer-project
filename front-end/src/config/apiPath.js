@@ -8,7 +8,7 @@ export const apiPath = {
   register: BASE_URL + "/api/user/signup", // url api register
   // Film
   getFilmByNameCinema: BASE_URL + "/film/findByNameCinema",
-  getFilmByName: BASE_URL + "/film/findByName?name",
+  getFilmByNameFilm: BASE_URL + "/film/findByName",
   getInfoCinema: BASE_URL + "/cinema",
   getInfoTickets: BASE_URL + "/tickets",
   getInfoUser: BASE_URL + "/users",
@@ -16,4 +16,5 @@ export const apiPath = {
   // Schedule
   getInfoAllSchedule: BASE_URL + "/schedule",
   getInfoSchedule: BASE_URL + "/schedule/findByNameCinemaAndDay",
+  getInfoScheduleByNameCinema: BASE_URL + "/schedule/findByNameCinema",
 };

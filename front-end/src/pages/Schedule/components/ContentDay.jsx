@@ -1,26 +1,23 @@
 import { ClockCircleOutlined, TagsOutlined } from "@ant-design/icons";
 import React, { useEffect } from "react";
+import { useState } from "react";
 import AvatarFilm from "../../../component/AvatarFilm/AvatarFilm";
 import TimeItem from "../../../component/TimeItem/TimeItem";
-import useSchedule from "../../../hooks/useSchedule";
+import useFilm from "../../../hooks/useFilm";
 import "./ContentDay.scss";
-const ContentDay = ({ data }) => {
-  const { infoSchedule, getInfoSchedule } = useSchedule();
+const ContentDay = ({ data, date }) => {
+  const { infoFilmByNameFilm, getInfoFilmByNameFilm, listFilm } = useFilm();
 
+  let list;
   useEffect(() => {
-    if (infoSchedule) {
-      getInfoSchedule({
-        nameCinema: "bttx",
-        day: "1/2-T4",
-      });
-    }
+    getInfoFilmByNameFilm(data);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-  console.log(infoSchedule);
+  }, [data]);
+  console.log(listFilm);
 
   return (
     <div className="movie-schedule">
-      {data.dataFilm.map((film, index) => {
+      {/* {data?.map((film, index) => {
         return (
           <div className="movie-item-schedule col-6" key={index}>
             <div style={{ marginRight: "12px" }}>
@@ -49,7 +46,7 @@ const ContentDay = ({ data }) => {
                     return (
                       <div className="list-time" key={index}>
                         <TimeItem
-                          date={data.title}
+                          // date={data.title}
                           nameFilm={film.title}
                           timeItem={time.time}
                           emptyChair={time.emptyChair}
@@ -62,7 +59,7 @@ const ContentDay = ({ data }) => {
             </div>
           </div>
         );
-      })}
+      })} */}
     </div>
   );
 };

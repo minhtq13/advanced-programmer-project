@@ -2,14 +2,12 @@
 import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, Space } from "antd";
 import React, { useMemo } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { setIsLogin } from "../../redux/slices/appSlice";
 import { clearUserInfo, getUserName } from "../../utils/storage";
 import "./MenuAccount.scss";
 
 const MenuAccount = () => {
-  const dispatch = useDispatch();
   const navigate = useNavigate();
   const { isLogin } = useSelector((state) => state.appReducer);
   const items = [
@@ -26,10 +24,14 @@ const MenuAccount = () => {
     },
     {
       key: "3",
-      label: <div className="drop-item">Đăng xuất</div>,
+      label: (
+        <a href="" className="drop-item">
+          Đăng xuất
+        </a>
+      ),
       onClick: () => {
         clearUserInfo();
-        dispatch(setIsLogin(false));
+        // dispatch(setIsLogin(false));
       },
     },
   ];

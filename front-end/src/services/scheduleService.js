@@ -26,3 +26,16 @@ export const getInfoScheduleService = async (
     3000
   );
 };
+export const getInfoScheduleByNameCinemaService = async (
+  params,
+  successCallback,
+  errorCallback
+) => {
+  await getRequest(
+    `${apiPath.getInfoScheduleByNameCinema}`,
+    params,
+    successCallback,
+    errorCallback,
+    3000
+  );
+};

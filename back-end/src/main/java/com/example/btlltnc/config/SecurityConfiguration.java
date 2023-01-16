@@ -50,7 +50,8 @@ public class SecurityConfiguration {
                 .antMatchers("/film")
                 .antMatchers("/film/findByNameCinema")
                 .antMatchers("/schedule")
-                        .antMatchers("/schedule/findByNameCinemaAndDay");
+                .antMatchers("/schedule/findByNameCinemaAndDay")
+                .antMatchers("/**");
 
     }
 

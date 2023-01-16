@@ -19,4 +19,5 @@ public class Schedule extends BaseModel{
     private String time;
     private String animation;
     private Integer soldOut;
+
 }

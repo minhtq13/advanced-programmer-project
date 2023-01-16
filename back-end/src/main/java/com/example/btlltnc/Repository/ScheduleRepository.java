@@ -1,6 +1,7 @@
 package com.example.btlltnc.Repository;
 
 import com.example.btlltnc.Base.BaseRepository;
+import com.example.btlltnc.DTO.ScheduleDTO;
 import com.example.btlltnc.Model.Schedule;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

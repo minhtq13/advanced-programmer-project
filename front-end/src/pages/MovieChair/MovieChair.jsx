@@ -1,18 +1,8 @@
-import React, { useEffect } from "react";
-import useTickets from "../../hooks/useTickets";
+import React from "react";
 import ChooseChair from "./components/ChooseChair";
 import InfoFilm from "./components/InfoFilm";
 import "./MovieChair.scss";
 const MovieChair = () => {
-  // eslint-disable-next-line no-unused-vars
-  // const { infoTicket, getInfoTicketsInMultiPage } = useTickets();
-  // useEffect(() => {
-  //   if (infoTicket) {
-  //     getInfoTicketsInMultiPage();
-  //   }
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
-
   return (
     <div className="wrapper-movie-chair">
       <div className="content">

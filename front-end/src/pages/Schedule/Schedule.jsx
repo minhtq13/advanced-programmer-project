@@ -21,13 +21,13 @@ const Schedule = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
   useEffect(() => {
-    if (infoSchedule) {
+    if (datePlay)
       getInfoSchedule({
         nameCinema: "bttx",
         day: datePlay,
       });
-    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [datePlay]);
   const allDay = [...new Set(infoScheduleByNameCinema.map((day) => day.day))];
@@ -75,7 +75,7 @@ const Schedule = () => {
         })}
       </div>
       <div className="tab-content">
-        <ContentDay date={datePlay} data={infoSchedule} />
+        <ContentDay data={infoSchedule} />
       </div>
     </div>
   );

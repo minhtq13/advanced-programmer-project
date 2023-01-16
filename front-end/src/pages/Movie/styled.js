@@ -5,7 +5,7 @@ export const WrapperStyled = styled.div`
     padding-top: 30px;
   }
   .movie-page {
-    // width: 1150px;
+    min-height: 500px;
   }
   .header-movie-page {
     height: 110px;

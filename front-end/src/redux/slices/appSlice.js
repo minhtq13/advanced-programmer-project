@@ -4,7 +4,8 @@ const initialState = {
   chooseChair: [],
   detailFilm: [],
   isLogin: false,
-  listDetailFilm: [],
+  fieldFilm: [],
+  timeItemInMovieChair: "",
 };
 
 const appReducer = createSlice({
@@ -20,15 +21,20 @@ const appReducer = createSlice({
     setIsLogin: (state, action) => {
       state.isLogin = action.payload;
     },
-    setListDetailFilm: (state, action) => {
-      if (state.listDetailFilm.includes(action.payload)) {
-      } else {
-        state.listDetailFilm.push(action.payload);
-      }
+    setFieldFilm: (state, action) => {
+      state.fieldFilm = action.payload;
+    },
+    setTimeItemInMovieChair: (state, action) => {
+      state.timeItemInMovieChair = action.payload;
     },
   },
 });
 
-export const { setChooseChair, setDetailFilm, setIsLogin, setListDetailFilm } =
-  appReducer.actions;
+export const {
+  setChooseChair,
+  setDetailFilm,
+  setIsLogin,
+  setFieldFilm,
+  setTimeItemInMovieChair,
+} = appReducer.actions;
 export default appReducer.reducer;

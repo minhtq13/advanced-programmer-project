@@ -7,7 +7,6 @@ function DefaultLayout({ children }) {
     <div className="wrapper-default-layout">
       <Nav />
       <div className="container-content">{children}</div>
-      <div className="line-footer"></div>
       <Footer />
     </div>
   );

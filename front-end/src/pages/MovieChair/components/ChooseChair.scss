@@ -71,18 +71,26 @@
         align-items: center;
       }
       .money {
+        position: relative;
         margin: 20px 0px 0px 0px;
         font-size: 20px;
         min-height: 40px;
+      }
+      .money::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 1px;
+        height: 100px;
+        background: #ccc;
+        top: -60px;
+        right: -68px;
       }
       img {
         height: 40px;
         width: 40px;
         margin-right: 12px;
       }
-    }
-    .line-dung {
-      border-right: 1px solid #ccc;
     }
   }
   .total-money {

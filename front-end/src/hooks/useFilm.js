@@ -10,7 +10,7 @@ import useNotify from "./useNotify";
 
 const useFilm = () => {
   const [listFilm, setListFilm] = useState([]);
-  const list = [];
+
   const notify = useNotify();
   const [infoFilm, setInfoFilm] = useState([]);
   const [infoFilmByCinema, setInfoFilmByCinema] = useState([]);
@@ -44,6 +44,8 @@ const useFilm = () => {
     );
   };
   const getInfoFilmByNameFilm = (data) => {
+    const list = [];
+    console.log("data", data);
     for (let i = 0; i < data.length; i++) {
       getInfoFilmByNameFilmService(
         {
@@ -51,7 +53,6 @@ const useFilm = () => {
         },
         (res) => {
           list.push(res.data[0]);
-          // setInfoFilmByNameFilm(res.data);
         },
         (err) => {
           console.log(err.response);

@@ -4,7 +4,13 @@ import { useNavigate } from "react-router-dom";
 import ButtonConfirm from "../ButtonConfirm/ButtonConfirm";
 import "./TimeItem.scss";
 
-const TimeItem = ({ timeItem, emptyChair, nameFilm, date }) => {
+const TimeItem = ({
+  timeItem,
+  emptyChair,
+  nameFilm,
+  date,
+  onAccpet = Function,
+}) => {
   // const infoMovieChair = { timeItem, emptyChair, nameFilm, date };
 
   const navigate = useNavigate();
@@ -14,6 +20,7 @@ const TimeItem = ({ timeItem, emptyChair, nameFilm, date }) => {
   };
   const handleOk = () => {
     setOpen(false);
+    onAccpet();
     navigate("/movie-chair");
   };
   const handleCancel = () => {

@@ -62,6 +62,10 @@ const ChooseChair = () => {
     }
   };
   const dispatch = useDispatch();
+  const convertToVND = (x) => {
+    x = x.toLocaleString("it-IT", { style: "currency", currency: "VND" });
+    return x;
+  };
 
   return (
     <div className="wrapper-choose-chair">
@@ -127,11 +131,10 @@ const ChooseChair = () => {
           </div>
           <div className="money">
             {listChairsClicked.length > 0
-              ? `${listChairsClicked.length}x50000 vnđ`
+              ? `${listChairsClicked.length}x${convertToVND(50000)}`
               : ""}
           </div>
         </div>
-        <div className="line-dung"></div>
         <div className="seat-unselect vip">
           <div className="seat-unselect-item">
             <img src={GheVIP} alt="" />
@@ -139,17 +142,15 @@ const ChooseChair = () => {
           </div>
           <div className="money">
             {listChairsClicked.length > 0
-              ? `${listChairsClicked.length}x50000 vnđ`
+              ? `${listChairsClicked.length}x${convertToVND(50000)}`
               : ""}
           </div>
         </div>
-
-        <div className="line-dung"></div>
         <div className="total-money">
           <h2>TỔNG TIỀN</h2>
           <span>
             {listChairsClicked.length > 0
-              ? `${listChairsClicked.length * 50000} vnđ`
+              ? `${convertToVND(listChairsClicked.length * 50000)}`
               : ""}
           </span>
         </div>

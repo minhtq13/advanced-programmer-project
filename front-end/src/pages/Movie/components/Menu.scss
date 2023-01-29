@@ -1,52 +1,69 @@
 .wrapper-movie-item {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  width: var(--width-content);
-  .movie-item {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    // text-align: center;
-    height: 600px;
-    width: 287px;
-    padding: 0 24px 24px 24px;
-    .info-movie {
-      width: 100%;
-      flex-direction: column;
-      text-align: left;
-      .detail {
+    width: var(--width-content);
+    .movie-item {
         display: flex;
-        .options {
-          font-weight: 500;
-          font-size: 16px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        // text-align: center;
+        height: 600px;
+        width: 287px;
+        padding: 0 24px 24px 24px;
+        .info-movie {
+            width: 100%;
+            flex-direction: column;
+            text-align: left;
+            .detail {
+                display: flex;
+                .options {
+                    font-weight: 500;
+                    font-size: 16px;
+                }
+                div {
+                    margin-left: 4px;
+                }
+            }
+            .title-movie {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                min-height: 44px;
+                font-size: 22px;
+                font-weight: 500;
+                color: #337ab7;
+                cursor: pointer;
+                margin: 12px 0;
+                div {
+                    line-height: 1.1;
+                }
+            }
+            .title-movie:hover {
+                text-decoration: underline;
+            }
         }
-        div {
-          margin-left: 4px;
+        .buy-ticket {
+            margin-top: 12px;
         }
-      }
-      .title-movie {
+    }
+    .film-not-data {
+        height: 400px;
         width: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        text-align: center;
-        min-height: 44px;
-        font-size: 22px;
-        font-weight: 500;
-        color: #337ab7;
-        cursor: pointer;
-        margin: 12px 0;
-        div {
-          line-height: 1.1;
+        align-items: center;
+        img {
+            width: 100px;
+            height: 100px;
         }
-      }
-      .title-movie:hover {
-        text-decoration: underline;
-      }
+        span {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #635d5d;
+        }
     }
-    .buy-ticket {
-      margin-top: 12px;
-    }
-  }
 }

@@ -1,3 +1,4 @@
+import { appPath } from "./appPath";
 import Cinemas from "../pages/Cinemas/Cinemas";
 import DetailFilm from "../pages/DetailFilm/DetailFilm";
 import Home from "../pages/Home/Home";
@@ -8,7 +9,6 @@ import MovieChair from "../pages/MovieChair/MovieChair";
 import NotFound from "../pages/NotFound";
 import Price from "../pages/Price";
 import Schedule from "../pages/Schedule/Schedule";
-import { appPath } from "./appPath";
 
 const publicRoutes = [
     { path: appPath.notFound, component: NotFound },
@@ -23,8 +23,8 @@ const publicRoutes = [
     { path: appPath.detailFilm, component: DetailFilm },
 
     // private routes
-    // { path: appPath.movieChair, component: MovieChair, isPrivateRouter: true },
-    { path: appPath.movieChair, component: MovieChair },
+    { path: appPath.movieChair, component: MovieChair, isPrivateRouter: true },
+    // { path: appPath.movieChair, component: MovieChair },
 ];
 
 const privateRoutes = [];

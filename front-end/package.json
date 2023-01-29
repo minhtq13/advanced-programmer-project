@@ -12,6 +12,8 @@
     "@types/redux": "^3.6.0",
     "antd": "4.24.3",
     "axios": "^1.2.1",
+    "dayjs": "^1.11.7",
+    "moment": "^2.29.4",
     "node-sass": "^8.0.0",
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",

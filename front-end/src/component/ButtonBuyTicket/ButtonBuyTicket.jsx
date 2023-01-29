@@ -1,6 +1,6 @@
-import { Button, Modal } from "antd";
 import React, { useState } from "react";
 import "./ButtonBuyTicket.scss";
+import { Button, Modal } from "antd";
 import ModalChooseSchedule from "./component/ModalChooseSchedule";
 
 const ButtonBuyTicket = () => {

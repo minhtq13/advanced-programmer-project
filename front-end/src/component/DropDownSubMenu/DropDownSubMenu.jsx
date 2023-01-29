@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
+import "./DropDownSubMenu.scss";
 import { Dropdown, Space } from "antd";
 import { DownOutlined } from "@ant-design/icons";
-import "./DropDownSubMenu.scss";
 
 const DropDownSubMenu = () => {
     const [cinemaName, setCinemaName] = useState("Beta Thanh Xuân");

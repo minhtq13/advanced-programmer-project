@@ -1,6 +1,6 @@
-import { Button } from "antd";
 import React from "react";
 import "./ButtonConfirm.scss";
+import { Button } from "antd";
 
 const ButtonConfirm = ({ buttonName, handleClickConfirm }) => {
     return (

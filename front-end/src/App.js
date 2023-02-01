@@ -17,7 +17,6 @@ function App() {
         <Router>
             <div className="App">
                 <Routes>
-                    {/* <AppRouters />; */}
                     {publicRoutes.map((route, index) => {
                         const Layout = getLayout(route.layout);
                         const Page = route.component;
@@ -48,9 +47,3 @@ function App() {
 }
 
 export default App;
-// const Layout =
-//   route.layout === null
-//     ? Fragment
-//     : route.layout === "HomePageLayout"
-//     ? HomePageLayout
-//     : DefaultLayout;

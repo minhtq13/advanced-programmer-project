@@ -1,0 +1,15 @@
+.payQR-component {
+    min-height: 500px;
+    padding-top: 30px;
+
+    .header {
+        font-size: 26px;
+        color: #337ab7;
+    }
+    .qr-code {
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+    }
+}

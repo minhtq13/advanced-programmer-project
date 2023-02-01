@@ -53,7 +53,12 @@ const TimeItem = ({
                         <div className="tabs-item">Giờ chiếu</div>
                     </div>
                     <div className="info-film">
-                        <div className="info-film-item">Beta Thanh Xuân</div>
+                        <div
+                            className="info-film-item"
+                            style={{ minWidth: "200px" }}
+                        >
+                            Beta Thanh Xuân
+                        </div>
                         <div className="info-film-item">{date}</div>
                         <div className="info-film-item">{timeItem}</div>
                     </div>

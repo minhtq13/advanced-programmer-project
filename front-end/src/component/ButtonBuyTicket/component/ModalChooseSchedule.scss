@@ -1,37 +1,52 @@
 .modal-choose-schedule-page {
-  .name-theater {
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-  .header-mcs {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #ddd;
-    margin-top: 32px;
-    height: 54px;
+    .name-theater {
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .current-cinema {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        font-size: 32px;
+    }
+    .current-cinema::after {
+        position: absolute;
+        content: "";
+        display: block;
+        height: 1px;
+        width: 100%;
+        bottom: -20px;
+        background: #eee;
+    }
+    .header-mcs {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        margin-top: 32px;
+        height: 54px;
 
-    .active {
-      border-bottom: 4px solid transparent;
-      border-image: linear-gradient(to right, #39adf0 0%, #075fa3 100%);
-      border-image-slice: 1;
-      border-width: 0px 0px 4px 0px;
-      color: var(--name-film-color);
+        .active {
+            border-bottom: 4px solid transparent;
+            border-image: linear-gradient(to right, #39adf0 0%, #075fa3 100%);
+            border-image-slice: 1;
+            border-width: 0px 0px 4px 0px;
+            color: var(--name-film-color);
+        }
+        .button-options {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            cursor: pointer;
+            margin-right: 6px;
+            font-size: 20px;
+            width: 157px;
+            height: 54px;
+        }
     }
-    .button-options {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 8px;
-      cursor: pointer;
-      margin-right: 6px;
-      font-size: 20px;
-      width: 157px;
-      height: 54px;
+    .tab-content {
+        min-height: 450px;
     }
-  }
-  .tab-content {
-    min-height: 500px;
-  }
 }

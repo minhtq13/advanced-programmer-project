@@ -1,54 +1,61 @@
 .wrapper-info-film {
-  background-color: #fff;
-  min-height: 700px;
+    background-color: #fff;
+    min-height: 700px;
 
-  .row1 {
-    display: flex;
-    .name-animation {
-      width: 50%;
-      .name {
-        margin: 24px 0px 24px 16px;
-        font-weight: 700;
-        font-size: 24px;
-        color: var(--name-film-color);
-      }
-      .animation {
-        font-weight: 500;
-        font-size: 18px;
-        margin-left: 16px;
-      }
-    }
-  }
-  .row2 {
-    border-bottom: 1px dashed #ccc;
-  }
-  .row2,
-  .row3 {
-    padding: 20px 30px;
-    .wrapper-item {
-      margin: 12px 0px;
-      display: flex;
-      .info {
-        min-width: 150px;
-      }
-      .detail {
-        font-weight: 500;
-        flex-wrap: wrap;
-        .chair-name::after {
-          content: ",";
+    .row1 {
+        display: flex;
+        .name-animation {
+            width: 50%;
+            .name {
+                margin: 24px 0px 24px 16px;
+                font-weight: 700;
+                font-size: 24px;
+                color: var(--name-film-color);
+                line-height: 1;
+            }
+            .animation {
+                font-weight: 500;
+                font-size: 18px;
+                margin-left: 16px;
+            }
         }
-        .chair-name:last-child::after {
-          content: none;
-        }
-      }
     }
-  }
-  .button-confirm-component {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 8px;
-    padding-bottom: 20px;
-  }
+    .row2 {
+        border-bottom: 1px dashed #ccc;
+    }
+    .row2,
+    .row3 {
+        padding: 20px 30px;
+        .wrapper-item {
+            margin: 12px 0px;
+            display: flex;
+            .info {
+                min-width: 150px;
+            }
+            .detail {
+                font-weight: 500;
+                flex-wrap: wrap;
+                .chair-name::after {
+                    content: ",";
+                }
+                .chair-name:last-child::after {
+                    content: none;
+                }
+            }
+        }
+    }
+    .button-confirm-component {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 8px;
+        padding-bottom: 20px;
+    }
+    .block-button {
+        // margin-top: 12px;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+    }
 }

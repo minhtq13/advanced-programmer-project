@@ -9,6 +9,7 @@ import GheDangChon from "../../../asset/images/seat-select-normal.png";
 import GheDatTruoc from "../../../asset/images/seat-set-normal.png";
 import GheTrong from "../../../asset/images/seat-unselect-normal.png";
 import GheVIP from "../../../asset/images/seat-unselect-vip.png";
+import { useSelector } from "react-redux";
 
 const dataTypeOfChair = [
     {
@@ -50,6 +51,7 @@ for (let i = 0; i < 153; i++) {
 let listChairsClicked = [];
 
 const ChooseChair = () => {
+    const { fieldFilm } = useSelector((state) => state.appReducer);
     const [clicked, setClicked] = useState(false);
     const handleClick = (item) => {
         setClicked(!clicked);
@@ -72,7 +74,7 @@ const ChooseChair = () => {
     return (
         <div className="wrapper-choose-chair">
             <div className="header text-bold">
-                Trang chủ &gt; Đặt vé &gt; <span> One Piece Film: Red</span>
+                Trang chủ &gt; Đặt vé &gt; <span>{fieldFilm?.film.name}</span>
             </div>
             <div className="type-of-chair">
                 {dataTypeOfChair.map((chair, index) => {

@@ -1,60 +1,62 @@
-.options-day {
-  display: flex;
-  flex-wrap: wrap;
-  .movie-item-schedule {
-    margin-top: 30px;
+.movie-schedule {
     display: flex;
-    .tag-time {
-      display: flex;
-    }
-  }
-  .detail {
-    .film-name {
-      font-size: 30px;
-      font-weight: bold;
-      color: var(--name-film-color);
-      line-height: 1.2;
-      min-height: 72px;
-    }
-    .tag-time {
-      margin: 12px;
-      font-size: 13px;
-      .tag-film {
-        margin-right: 12px;
-        font-style: italic;
-      }
-    }
-    .desc {
-      .animation {
-        font-weight: bold;
-        font-size: 18px;
-        margin-bottom: 12px;
-      }
-      .wrapper-list-time {
+    flex-wrap: wrap;
+    min-height: 450px;
+    .movie-item-schedule {
+        margin-top: 30px;
         display: flex;
-        flex-wrap: wrap;
-        .list-time {
-          flex-direction: column;
-          justify-content: center;
-          text-align: center;
-          margin: 8px;
-          cursor: pointer;
-          .time-item {
-            background-color: #ccc;
-            padding: 4px 2px;
-          }
-          .empty-chair {
-            font-size: 12px;
-          }
+        .tag-time {
+            display: flex;
         }
-      }
     }
-  }
+    .detail {
+        .film-name {
+            font-size: 30px;
+            font-weight: bold;
+            color: var(--name-film-color);
+            line-height: 1.2;
+            min-height: 72px;
+        }
+        .tag-time {
+            margin: 12px;
+            font-size: 13px;
+            .tag-film {
+                margin-right: 12px;
+                font-style: italic;
+            }
+        }
+        .desc {
+            .animation {
+                font-weight: bold;
+                font-size: 18px;
+                margin-bottom: 12px;
+            }
+            .wrapper-list-time {
+                display: flex;
+                flex-wrap: wrap;
+                .list-time {
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                    margin: 8px;
+                    cursor: pointer;
+                    .time-item {
+                        background-color: #ccc;
+                        padding: 4px 2px;
+                    }
+                    .empty-chair {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
 }
 .no-schedule-film {
-  min-height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
 }

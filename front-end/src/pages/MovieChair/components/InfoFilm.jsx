@@ -1,6 +1,3 @@
-import React from "react";
-import "./InfoFilm.scss";
-import { useSelector } from "react-redux";
 import {
     ClockCircleOutlined,
     FieldTimeOutlined,
@@ -10,25 +7,42 @@ import {
     ScheduleOutlined,
     TagsOutlined,
 } from "@ant-design/icons";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom/dist";
 import AvatarFilm from "../../../component/AvatarFilm/AvatarFilm";
 import ButtonConfirm from "../../../component/ButtonConfirm/ButtonConfirm";
+import { setStep } from "../../../redux/slices/appSlice";
+import "./InfoFilm.scss";
 
 const InfoFilm = () => {
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const { step } = useSelector((state) => state.appReducer);
     const { chooseChair, fieldFilm, timeItemInMovieChair } = useSelector(
         (state) => state.appReducer
     );
+
     function getRandomInt(min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min) + min);
     }
+    const handleOK = () => {
+        navigate("/home");
+    };
+    const handleBack = () => {
+        dispatch(setStep(0));
+    };
 
-    const handleOk = () => {};
+    const handleOk = () => {
+        dispatch(setStep(1));
+    };
     return (
         <div className="wrapper-info-film">
             <div className="row1">
                 <AvatarFilm
-                    image={fieldFilm.film.img}
+                    image={fieldFilm?.film.img}
                     width={150}
                     height={237}
                 />
@@ -92,10 +106,25 @@ const InfoFilm = () => {
                 </div>
             </div>
             <div className="button-confirm-component">
-                <ButtonConfirm
-                    handleClickConfirm={handleOk}
-                    buttonName="TIẾP TỤC"
-                />
+                {step === 0 ? (
+                    <ButtonConfirm
+                        handleDisabled={chooseChair.length > 0 ? false : true}
+                        handleClickConfirm={handleOk}
+                        buttonName="TIẾP TỤC"
+                    />
+                ) : (
+                    <div className="block-button">
+                        <ButtonConfirm
+                            buttonName={"Back"}
+                            handleClickConfirm={handleBack}
+                        />
+
+                        <ButtonConfirm
+                            buttonName={"Done"}
+                            handleClickConfirm={handleOK}
+                        />
+                    </div>
+                )}
             </div>
         </div>
     );

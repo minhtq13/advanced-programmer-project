@@ -1,15 +1,55 @@
 .payQR-component {
-    min-height: 500px;
-    padding-top: 30px;
+  min-height: 500px;
+  padding-top: 30px;
 
-    .header {
-        font-size: 26px;
-        color: #337ab7;
-    }
-    .qr-code {
-        width: 100%;
-        margin-top: 50px;
+  .header {
+    font-size: 26px;
+    color: #337ab7;
+  }
+  .wrapper-info-pay {
+    margin: 30px 0px;
+    .detail {
+      display: flex;
+      .left {
         display: flex;
-        justify-content: center;
+
+        min-width: 200px;
+      }
+      span {
+        color: rgb(253, 40, 2);
+      }
     }
+    .info-pay {
+      margin: 12px 0px;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 20px;
+        width: 56px;
+        height: 36px;
+      }
+    }
+  }
+  .qr-code {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  .desc {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .expire {
+      color: #ccc;
+    }
+    .banking {
+      color: #337ab7;
+      font-size: 20px;
+    }
+  }
 }

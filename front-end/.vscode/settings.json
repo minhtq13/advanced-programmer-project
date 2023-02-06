@@ -1,4 +1,12 @@
 {
-    "html-to-css-autocompletion.triggerCharacters": true,
-    "html-to-css-autocompletion.autocompletionFilesScope": "linked-files"
+  "html-to-css-autocompletion.triggerCharacters": true,
+  "html-to-css-autocompletion.autocompletionFilesScope": "linked-files",
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showSuggestionsAsSnippets": true,
+  "editor.snippetSuggestions": "top",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "razor": "html",
+    "plaintext": "pug"
+  }
 }

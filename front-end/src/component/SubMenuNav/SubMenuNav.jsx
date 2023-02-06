@@ -1,113 +1,132 @@
-import React, { useState } from "react";
-import "./SubMenuNav.scss";
 import { DownOutlined, RightOutlined } from "@ant-design/icons";
-
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
+import { setCurrentCinema } from "../../redux/slices/appSlice";
+import "./SubMenuNav.scss";
 const dataSubmenu = [
-    {
+  {
+    id: 1,
+    title: "Hà Nội",
+    submenu: [
+      {
         id: 1,
-        title: "Hà Nội",
-        submenu: [
-            {
-                id: 1,
-                title: "Beta Thanh Xuân",
-            },
-            {
-                id: 2,
-                title: "Beta Mỹ Đình",
-            },
-            {
-                id: 3,
-                title: "Beta Đan Phượng",
-            },
-            {
-                id: 4,
-                title: "Beta Giải Phóng",
-            },
-        ],
-    },
-    {
+        title: "Beta Thanh Xuân",
+        ext: "bttx",
+      },
+      {
         id: 2,
-        title: "TP. Hồ Chí Minh",
-        submenu: [
-            {
-                id: 1,
-                title: "Beta Quang Trung",
-            },
-        ],
-    },
-    {
+        title: "Beta Mỹ Đình",
+        ext: "btmd",
+      },
+      {
         id: 3,
-        title: "Bắc Giang",
-        submenu: [
-            {
-                id: 1,
-                title: "Beta Bắc Giang",
-            },
-        ],
-    },
-    {
+        title: "Beta Đan Phượng",
+        ext: "btdp",
+      },
+      {
         id: 4,
-        title: "Đồng Nai",
-        submenu: [
-            {
-                id: 1,
-                title: "Beta Đồng Nai",
-            },
-            {
-                id: 2,
-                title: "Beta Long Khánh",
-            },
-            {
-                id: 3,
-                title: "Beta Long Thành",
-            },
-        ],
-    },
+        title: "Beta Giải Phóng",
+        ext: "btgp",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "TP. Hồ Chí Minh",
+    submenu: [
+      {
+        id: 1,
+        title: "Beta Quang Trung",
+        ext: "btqt",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Bắc Giang",
+    submenu: [
+      {
+        id: 1,
+        title: "Beta Bắc Giang",
+        ext: "btbg",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Đồng Nai",
+    submenu: [
+      {
+        id: 1,
+        title: "Beta Đồng Nai",
+        ext: "btdn",
+      },
+      {
+        id: 2,
+        title: "Beta Long Khánh",
+        ext: "btlk",
+      },
+      {
+        id: 3,
+        title: "Beta Long Thành",
+        ext: "btlt",
+      },
+    ],
+  },
 ];
 
 const SubMenuNav = () => {
-    const [nameCinema, setNameCinema] = useState("Beta Thanh Xuân");
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const location = useLocation();
 
-    return (
-        <div className="wrapper-sub-menu">
-            <ul className="menu">
-                <li className="sub-menu-item">
-                    <a className="name-cinema" href="#!">
-                        <div>{nameCinema}</div>
-                        <DownOutlined />
-                    </a>
-                    <ul className="sub-menu">
-                        {dataSubmenu.map((data, index) => {
-                            return (
-                                <li key={index}>
-                                    <a className="menu1" href="#!">
-                                        <span>{data.title}</span>
-                                        <RightOutlined />
-                                    </a>
-                                    <ul className="sub-menu">
-                                        {data.submenu.map((menu1, index) => {
-                                            return (
-                                                <li
-                                                    key={index}
-                                                    onClick={() =>
-                                                        setNameCinema(
-                                                            menu1.title
-                                                        )
-                                                    }
-                                                >
-                                                    <a href="#!">
-                                                        {menu1.title}
-                                                    </a>
-                                                </li>
-                                            );
-                                        })}
-                                    </ul>
-                                </li>
-                            );
-                        })}
-                    </ul>
+  const rendenNameCinema = () => {};
 
-                    {/* <ul class="sub-menu">
+  // const { currentCinema } = useSelector((state) => state.appReducer);
+  const [nameCinema, setNameCinema] = useState("Beta Thanh Xuân");
+  const currentPage = location?.pathname.split("/")[2];
+
+  const handleClickMenuItem = (menu) => {
+    setNameCinema(menu.title);
+    dispatch(setCurrentCinema(menu.ext));
+    navigate(`/${menu.ext}/${currentPage}`);
+  };
+
+  return (
+    <div className="wrapper-sub-menu">
+      <ul className="menu">
+        <li className="sub-menu-item">
+          <div className="name-cinema" href="#!">
+            <div>{nameCinema}</div>
+            <DownOutlined />
+          </div>
+          <ul className="sub-menu">
+            {dataSubmenu.map((data, index) => {
+              return (
+                <li key={index}>
+                  <div className="menu1" href="#!">
+                    <span>{data.title}</span>
+                    <RightOutlined />
+                  </div>
+                  <ul className="sub-menu">
+                    {data.submenu.map((menu1, index) => {
+                      return (
+                        <li
+                          key={index}
+                          onClick={() => handleClickMenuItem(menu1)}
+                        >
+                          <div className="menu2">{menu1.title}</div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </li>
+              );
+            })}
+          </ul>
+
+          {/* <ul class="sub-menu">
             <li>
               <a className="menu1" href="#!">
                 <span>Hà Nội</span>
@@ -168,10 +187,10 @@ const SubMenuNav = () => {
               </ul>
             </li>
           </ul> */}
-                </li>
-            </ul>
-        </div>
-    );
+        </li>
+      </ul>
+    </div>
+  );
 };
 
 export default SubMenuNav;

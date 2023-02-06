@@ -11,21 +11,21 @@ import Schedule from "../pages/Schedule/Schedule";
 import { appPath } from "./appPath";
 
 const publicRoutes = [
-    { path: appPath.notFound, component: NotFound },
-    { path: appPath.default, component: Home, layout: "HomePageLayout" },
-    { path: appPath.home, component: Home, layout: "HomePageLayout" },
-    { path: appPath.price, component: Price },
-    { path: appPath.schedule, component: Schedule },
-    { path: appPath.movie, component: Movie },
-    { path: appPath.cinemas, component: Cinemas },
-    { path: appPath.member, component: Member },
-    { path: appPath.login, component: Account },
-    { path: appPath.detailFilm, component: DetailFilm },
+  { path: appPath.notFound, component: NotFound },
+  { path: appPath.default, component: Home, layout: "HomePageLayout" },
+  { path: ":id" + appPath.home, component: Home, layout: "HomePageLayout" },
+  { path: ":id" + appPath.price, component: Price },
+  { path: ":id" + appPath.schedule, component: Schedule },
+  { path: ":id" + appPath.movie, component: Movie },
+  { path: ":id" + appPath.cinemas, component: Cinemas },
+  { path: ":id" + appPath.member, component: Member },
+  { path: ":id" + appPath.login, component: Account },
+  { path: ":id" + appPath.detailFilm, component: DetailFilm },
 
-    // private routes
-    { path: appPath.movieChair, component: MovieChair, isPrivateRouter: true },
+  // private routes
+  { path: appPath.movieChair, component: MovieChair, isPrivateRouter: true },
 
-    // { path: appPath.movieChair, component: MovieChair },
+  // { path: appPath.movieChair, component: MovieChair },
 ];
 
 const privateRoutes = [];

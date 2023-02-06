@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import useSchedule from "../../hooks/useSchedule";
 import ContentDay from "./components/ContentDay";
 import "./Schedule.scss";
 
 const Schedule = () => {
+  const { currentCinema } = useSelector((state) => state.appReducer);
   const [currentIndex, setCurrentIndex] = useState(0);
   const {
     infoSchedule,
@@ -16,7 +18,7 @@ const Schedule = () => {
   useEffect(() => {
     if (infoScheduleByNameCinema) {
       getInfoScheduleByNameCinema({
-        nameCinema: "bttx",
+        nameCinema: currentCinema,
       });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -25,7 +27,7 @@ const Schedule = () => {
   useEffect(() => {
     if (datePlay)
       getInfoSchedule({
-        nameCinema: "bttx",
+        nameCinema: currentCinema,
         day: datePlay,
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps

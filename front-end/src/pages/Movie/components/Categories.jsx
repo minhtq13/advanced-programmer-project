@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./Categories.scss";
 
-const switchCategory = (item) => {
-    if (item === "psc") return "PHIM SẮP CHIẾU";
-    else if (item === "pdc") return "PHIM ĐANG CHIẾU";
-    else if (item === "scdb") return "SUẤT CHIẾU ĐẶC BIỆT";
+const switchCategory = (category) => {
+    if (category === "psc") return "PHIM SẮP CHIẾU";
+    else if (category === "pdc") return "PHIM ĐANG CHIẾU";
+    else if (category === "scdb") return "SUẤT CHIẾU ĐẶC BIỆT";
 };
 const Categories = ({ categories, filterItems }) => {
     const [activeCategory, setActiveCategory] = useState(0);

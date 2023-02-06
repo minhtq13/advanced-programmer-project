@@ -5,15 +5,36 @@ import BTBacGiang from "../../asset/images/btbg.jpg";
 import { dataHotFilm } from "./data";
 import { useEffect } from "react";
 import AvatarFilm from "../../component/AvatarFilm/AvatarFilm";
+import { useLocation } from "react-router-dom";
 
 const Cinemas = () => {
-    const { infoCinema, getInfoCinemaInCinamePage } = useCinema();
-    useEffect(() => {
-        if (infoCinema) {
-            getInfoCinemaInCinamePage();
+    const location = useLocation();
+    const currentCinemaPath = location?.pathname.split("/")[1];
+    const { infoCinema, getInfoCinema } = useCinema();
+
+    const convertNameCinema = () => {
+        switch (currentCinemaPath) {
+            case "bttx":
+                return "Beta Thanh Xuân";
+            case "btmd":
+                return "Beta Mỹ Đình";
+            case "btqt":
+                return "Beta Quang Trung";
+            case "btbg":
+                return "Beta Bắc Giang";
+            default:
+                return "Beta Thanh Xuân";
         }
+    };
+    useEffect(() => {
+        getInfoCinema({
+            name: convertNameCinema(),
+        });
+
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [currentCinemaPath]);
+
+    console.log(infoCinema[0]);
 
     return (
         <div className="cinemas-component">

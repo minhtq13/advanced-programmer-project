@@ -1,104 +1,100 @@
 .wrapper-sub-menu {
-  display: flex;
-  align-items: center;
-  z-index: 10000;
-  .nav-content {
     display: flex;
     align-items: center;
-  }
-  ul {
-    list-style: none;
-  }
-  .menu {
-    display: flex;
-    align-items: center;
-    margin: 0;
-  }
-  .menu > li {
-    display: inline-block;
-    padding: 20px;
-  }
-
-  .menu li {
-    position: relative;
-  }
-
-  .menu li:hover > .sub-menu {
-    display: block;
-  }
-
-  .menu a {
-    color: rgb(15, 14, 14);
-    text-decoration: none;
-  }
-
-  .sub-menu {
-    position: absolute;
-    top: 55px;
-    left: 22px;
-    width: 160px;
-    background: #fff;
-    display: none;
-    box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%),
-      0 9px 28px 8px rgb(0 0 0 / 5%);
-  }
-
-  .sub-menu li:hover {
-    background: #ddd;
-  }
-
-  .sub-menu a {
-    display: block;
-    padding: 8px 16px;
-    color: #333;
-    border-bottom: 1px solid #ccc;
-  }
-
-  .sub-menu .sub-menu {
-    left: 100%;
-    top: 0;
-    display: none;
-  }
-  //   .sub-menu li div {
-  //     display: flex;
-  //     align-items: center;
-  //   }
-  .menu2 {
-    padding: 8px 16px;
-    color: #333;
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    align-items: center;
-    color: rgb(15, 14, 14);
-    text-decoration: none;
-  }
-  .sub-menu-item {
-    min-width: 200px;
-  }
-  .name-cinema {
-    font-size: 16px;
-    padding: 6px 12px 6px 12px;
-    border: solid 1px #ccc;
-    border-radius: 16px !important;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    div {
-      margin-right: 6px;
+    z-index: 10000;
+    .nav-content {
+        display: flex;
+        align-items: center;
     }
-  }
-  .menu1 {
-    display: block;
-    padding: 8px 16px;
-    color: #333;
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    justify-content: space-between;
-    svg {
-      font-size: 12px;
+    ul {
+        list-style: none;
     }
-  }
-  .test {
-    min-width: 200px;
-  }
+    .menu {
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+    .menu > li {
+        display: inline-block;
+        padding: 20px;
+    }
+
+    .menu li {
+        position: relative;
+    }
+
+    .menu li:hover > .sub-menu {
+        display: block;
+    }
+
+    .menu a {
+        color: rgb(15, 14, 14);
+        text-decoration: none;
+    }
+
+    .sub-menu {
+        position: absolute;
+        top: 55px;
+        left: 22px;
+        width: 160px;
+        background: #fff;
+        display: none;
+        box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%),
+            0 6px 16px 0 rgb(0 0 0 / 8%), 0 9px 28px 8px rgb(0 0 0 / 5%);
+    }
+
+    .sub-menu li:hover {
+        background: #ddd;
+    }
+
+    .sub-menu a {
+        display: block;
+        padding: 8px 16px;
+        color: #333;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .sub-menu .sub-menu {
+        left: 100%;
+        top: 0;
+        display: none;
+    }
+
+    .menu2 {
+        cursor: pointer;
+        padding: 8px 16px;
+        color: #333;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        color: rgb(15, 14, 14);
+        text-decoration: none;
+    }
+    .sub-menu-item {
+        min-width: 200px;
+    }
+    .name-cinema {
+        font-size: 16px;
+        padding: 6px 12px 6px 12px;
+        border: solid 1px #ccc;
+        border-radius: 16px !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        div {
+            margin-right: 6px;
+        }
+    }
+    .menu1 {
+        display: block;
+        padding: 8px 16px;
+        color: #333;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        svg {
+            font-size: 12px;
+        }
+    }
 }

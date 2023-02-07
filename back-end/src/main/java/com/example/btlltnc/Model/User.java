@@ -26,6 +26,7 @@ public class User extends BaseModel implements UserDetails {
     private Integer gender;
     private String birthday;
 
+    private Integer role;
     public void setPassword(String password) {
         this.password = AES.encrypt(password);
     }

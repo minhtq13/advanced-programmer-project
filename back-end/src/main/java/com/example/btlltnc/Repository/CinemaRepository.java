@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface CinemaRepository extends BaseRepository<Cinema>{
     @Query(value="from Cinema cinema where cinema.name= ?1")
-    List<Cinema> findCinemaByName(String name);
+    Cinema findCinemaByName(String name);
 
     @Query(value="from Cinema cinema where cinema.city= ?1")
     List<Cinema> findCinemaByCity(String city);

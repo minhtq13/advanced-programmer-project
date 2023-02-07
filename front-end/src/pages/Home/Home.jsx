@@ -1,5 +1,4 @@
 import React from "react";
-import { useSearchParams } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -10,8 +9,6 @@ import Movie from "../Movie";
 import "./Home.scss";
 
 export default function Homepage() {
-  const [alo, setAlo] = useSearchParams();
-
   let settings = {
     dots: false,
     infinite: true,

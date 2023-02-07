@@ -9,16 +9,18 @@ import {
 } from "@ant-design/icons";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom/dist";
+import { useLocation, useNavigate } from "react-router-dom/dist";
 import AvatarFilm from "../../../component/AvatarFilm/AvatarFilm";
 import ButtonConfirm from "../../../component/ButtonConfirm/ButtonConfirm";
 import { setStep } from "../../../redux/slices/appSlice";
-import { getRandomInt } from "../../../utils/tools";
+import { convertNameCinema, getRandomInt } from "../../../utils/tools";
 import "./InfoFilm.scss";
 
 const InfoFilm = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const location = useLocation();
+  const currentCinema = location?.pathname.split("/")[1];
   const { step } = useSelector((state) => state.appReducer);
   const { chooseChair, fieldFilm, timeItemInMovieChair } = useSelector(
     (state) => state.appReducer
@@ -39,7 +41,12 @@ const InfoFilm = () => {
   return (
     <div className="wrapper-info-film">
       <div className="row1">
-        <AvatarFilm image={fieldFilm?.film?.img} width={150} height={237} />
+        {fieldFilm.film ? (
+          <AvatarFilm image={fieldFilm.film.img} width={150} height={237} />
+        ) : (
+          ""
+        )}
+
         <div className="name-animation">
           <div className="name">{fieldFilm?.film?.name}</div>
           <div className="animation">{fieldFilm?.animation} Phụ đề</div>
@@ -64,7 +71,7 @@ const InfoFilm = () => {
           <div className="info">
             <MenuUnfoldOutlined /> Rạp chiếu
           </div>
-          <div className="detail">Beta Thanh Xuân</div>
+          <div className="detail">{convertNameCinema(currentCinema)}</div>
         </div>
         <div className="wrapper-item">
           <div className="info">

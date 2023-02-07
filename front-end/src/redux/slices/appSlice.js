@@ -7,7 +7,7 @@ const initialState = {
   fieldFilm: [],
   timeItemInMovieChair: "",
   step: 0,
-  currentCinema: "bttx",
+  changeCinema: null,
 };
 
 const appReducer = createSlice({
@@ -32,8 +32,8 @@ const appReducer = createSlice({
     setStep: (state, action) => {
       state.step = action.payload;
     },
-    setCurrentCinema: (state, action) => {
-      state.currentCinema = action.payload;
+    setChangeCinema: (state, action) => {
+      state.changeCinema = action.payload;
     },
   },
 });
@@ -45,6 +45,6 @@ export const {
   setFieldFilm,
   setTimeItemInMovieChair,
   setStep,
-  setCurrentCinema,
+  setChangeCinema,
 } = appReducer.actions;
 export default appReducer.reducer;

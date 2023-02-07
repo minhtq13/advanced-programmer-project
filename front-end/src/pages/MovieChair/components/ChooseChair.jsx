@@ -69,10 +69,11 @@ const ChooseChair = () => {
   return (
     <div className="wrapper-choose-chair">
       <div className="header text-bold">
-        Trang chủ &gt; Đặt vé &gt; <span>{fieldFilm?.film.name}</span>
+        Trang chủ &gt; Đặt vé &gt;
+        <span>{fieldFilm.film ? fieldFilm.film.name : ""}</span>
       </div>
       <div className="type-of-chair">
-        {dataTypeOfChair.map((chair, index) => {
+        {dataTypeOfChair?.map((chair, index) => {
           return (
             <div className="seat-item" key={index}>
               <img src={chair.img} alt="" />
@@ -86,7 +87,7 @@ const ChooseChair = () => {
           <img src={icScreen} alt="" />
         </div>
         <div className="check-show">
-          {listChairs.map((listChair, index) => (
+          {listChairs?.map((listChair, index) => (
             <React.Fragment key={index}>
               <div
                 className="seat-item"

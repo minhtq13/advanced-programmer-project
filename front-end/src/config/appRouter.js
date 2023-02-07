@@ -23,7 +23,11 @@ const publicRoutes = [
   { path: ":id" + appPath.detailFilm, component: DetailFilm },
 
   // private routes
-  { path: appPath.movieChair, component: MovieChair, isPrivateRouter: true },
+  {
+    path: ":id" + appPath.movieChair,
+    component: MovieChair,
+    isPrivateRouter: true,
+  },
 
   // { path: appPath.movieChair, component: MovieChair },
 ];

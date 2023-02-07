@@ -1,19 +1,21 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "./Login.scss";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Button, Form, Input } from "antd";
 import useUsers from "../../../hooks/useUsers";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 
 const Login = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { getToken, getUserInfo } = useUsers();
+  const currentCinema = location?.pathname.split("/")[1];
   const onFinish = (values) => {
     getToken(values);
     if (localStorage.getItem("_token")) {
       getUserInfo(values);
-      navigate("/home");
+      navigate(`/${currentCinema}/home`);
     }
   };
 

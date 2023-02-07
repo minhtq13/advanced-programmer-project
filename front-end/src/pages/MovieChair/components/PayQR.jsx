@@ -10,7 +10,8 @@ const PayQR = () => {
   return (
     <div className="payQR-component">
       <div className="header text-bold">
-        Trang chủ &gt; Đặt vé &gt; <span>{fieldFilm?.film.name}</span>
+        Trang chủ &gt; Đặt vé &gt;
+        <span>{fieldFilm.film ? fieldFilm.film.name : ""}</span>
       </div>
       <div className="wrapper-info-pay">
         <div className="info-pay">

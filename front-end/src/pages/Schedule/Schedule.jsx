@@ -5,91 +5,83 @@ import ContentDay from "./components/ContentDay";
 import "./Schedule.scss";
 
 const Schedule = () => {
-    const location = useLocation();
-    const currentCinemaPath = location?.pathname.split("/")[1];
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const {
-        infoSchedule,
-        getInfoSchedule,
-        infoScheduleByNameCinema,
-        getInfoScheduleByNameCinema,
-    } = useSchedule();
-    const [datePlay, setDatePlay] = useState("1/2-T4");
+  const location = useLocation();
+  const currentCinema = location?.pathname.split("/")[1];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const {
+    infoSchedule,
+    getInfoSchedule,
+    infoScheduleByNameCinema,
+    getInfoScheduleByNameCinema,
+  } = useSchedule();
+  const [datePlay, setDatePlay] = useState("1/2-T4");
 
-    useEffect(() => {
-        if (infoScheduleByNameCinema) {
-            getInfoScheduleByNameCinema({
-                nameCinema: currentCinemaPath,
-            });
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [currentCinemaPath]);
-
-    useEffect(() => {
-        if (datePlay)
-            getInfoSchedule({
-                nameCinema: currentCinemaPath,
-                day: datePlay,
-            });
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [datePlay, currentCinemaPath]);
-    const allDay = [...new Set(infoScheduleByNameCinema.map((day) => day.day))];
-
-    const listObjOfDay = [];
-    for (let i = 0; i < allDay.length; i++) {
-        listObjOfDay.push({
-            date: allDay[i].charAt(0),
-            month: allDay[i].charAt(2),
-            dayOfWeek: allDay[i].substring(4),
-        });
+  useEffect(() => {
+    if (infoScheduleByNameCinema) {
+      getInfoScheduleByNameCinema({
+        nameCinema: currentCinema,
+      });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentCinema]);
 
-    listObjOfDay.sort((a, b) => {
-        if (a.month === b.month) {
-            return a.date - b.date;
-        } else {
-            return a.month - b.month;
-        }
+  useEffect(() => {
+    if (datePlay)
+      getInfoSchedule({
+        nameCinema: currentCinema,
+        day: datePlay,
+      });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [datePlay, currentCinema]);
+  const allDay = [...new Set(infoScheduleByNameCinema.map((day) => day.day))];
+
+  const listObjOfDay = [];
+  for (let i = 0; i < allDay.length; i++) {
+    listObjOfDay.push({
+      date: allDay[i].charAt(0),
+      month: allDay[i].charAt(2),
+      dayOfWeek: allDay[i].substring(4),
     });
-    for (let i = 0; i < listObjOfDay.length; i++) {
-        listObjOfDay[i]["id"] = i;
-    }
+  }
 
-    return (
-        <div className="schedule-page">
-            <div className="header-schedule">
-                {listObjOfDay.map((data, index) => {
-                    return (
-                        <div
-                            onClick={() => {
-                                setCurrentIndex(data.id);
-                                setDatePlay(
-                                    data.date +
-                                        "/" +
-                                        data.month +
-                                        "-" +
-                                        data.dayOfWeek
-                                );
-                            }}
-                            key={index}
-                            className={`button-options ${
-                                data.id === currentIndex ? "active" : ""
-                            }`}
-                        >
-                            {data.dayOfWeek +
-                                " - " +
-                                data.date +
-                                "/" +
-                                data.month}
-                        </div>
-                    );
-                })}
+  listObjOfDay.sort((a, b) => {
+    if (a.month === b.month) {
+      return a.date - b.date;
+    } else {
+      return a.month - b.month;
+    }
+  });
+  for (let i = 0; i < listObjOfDay.length; i++) {
+    listObjOfDay[i]["id"] = i;
+  }
+
+  return (
+    <div className="schedule-page">
+      <div className="header-schedule">
+        {listObjOfDay.map((data, index) => {
+          return (
+            <div
+              onClick={() => {
+                setCurrentIndex(data.id);
+                setDatePlay(
+                  data.date + "/" + data.month + "-" + data.dayOfWeek
+                );
+              }}
+              key={index}
+              className={`button-options ${
+                data.id === currentIndex ? "active" : ""
+              }`}
+            >
+              {data.dayOfWeek + " - " + data.date + "/" + data.month}
             </div>
-            <div className="tab-content">
-                <ContentDay data={infoSchedule} />
-            </div>
-        </div>
-    );
+          );
+        })}
+      </div>
+      <div className="tab-content">
+        <ContentDay data={infoSchedule} />
+      </div>
+    </div>
+  );
 };
 
 export default Schedule;

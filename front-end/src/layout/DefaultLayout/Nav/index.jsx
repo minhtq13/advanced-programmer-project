@@ -79,48 +79,45 @@ export default function Nav() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const currentCinemaName = location?.pathname.split("/")[1];
+  const currentCinema = location?.pathname.split("/")[1];
 
   return (
     <div className="wrapper-header">
       <nav className="main-header">
         <div className="nav-contain">
-          <Link to="/home">
+          <Link to={`/${currentCinema}/home`}>
             <div className="logo-beta">
               <img src={logoBeta} alt="" />
             </div>
           </Link>
           <SubMenuNav />
           <div className="nav-content">
-            <NavLink to={`/${currentCinemaName}/home`} className="nav-links">
+            <NavLink to={`/${currentCinema}/home`} className="nav-links">
               TRANG CHỦ
             </NavLink>
           </div>
           <div className="nav-content">
-            <NavLink
-              to={`/${currentCinemaName}/schedule`}
-              className="nav-links"
-            >
+            <NavLink to={`/${currentCinema}/schedule`} className="nav-links">
               LỊCH CHIẾU THEO RẠP
             </NavLink>
           </div>
           <div className="nav-content">
-            <NavLink to={`/${currentCinemaName}/movie`} className="nav-links">
+            <NavLink to={`/${currentCinema}/movie`} className="nav-links">
               PHIM
             </NavLink>
           </div>
           <div className="nav-content">
-            <NavLink to={`/${currentCinemaName}/cinemas`} className="nav-links">
+            <NavLink to={`/${currentCinema}/cinemas`} className="nav-links">
               RẠP
             </NavLink>
           </div>
           <div className="nav-content">
-            <NavLink to={`/${currentCinemaName}/price`} className="nav-links">
+            <NavLink to={`/${currentCinema}/price`} className="nav-links">
               GIÁ VÉ
             </NavLink>
           </div>
           <div className="nav-content">
-            <NavLink to={`/${currentCinemaName}/member`} className="nav-links">
+            <NavLink to={`/${currentCinema}/member`} className="nav-links">
               THÀNH VIÊN
             </NavLink>
           </div>

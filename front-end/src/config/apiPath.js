@@ -12,6 +12,10 @@ export const apiPath = {
     getInfoTickets: BASE_URL + "/tickets",
     getInfoUser: BASE_URL + "/users",
     getInfoFilm: BASE_URL + "/film",
+    addFilm: BASE_URL + "/add-film",
+    updateFilm: BASE_URL + "/update-film",
+    deleteFilm: BASE_URL + "/delete-film",
+
     // Schedule
     getInfoAllSchedule: BASE_URL + "/schedule",
     getInfoSchedule: BASE_URL + "/schedule/findByNameCinemaAndDay",

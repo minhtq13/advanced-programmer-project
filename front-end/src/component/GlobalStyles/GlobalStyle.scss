@@ -3,68 +3,71 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap");
 
 :root {
-    --width-content: 1150px;
-    --padding-left-header: calc((100vw - 1150px) / 2);
-    --width-content-admin: 902px;
-    // Default layout
-    --margin-top-content: 75px;
-    --padding-bottom-content: 50px;
-    // color
-    --name-film-color: #03599d;
+  --width-content: 1150px;
+  --padding-left-header: calc((100vw - 1150px) / 2);
+  --width-content-admin: 902px;
+  // Default layout
+  --margin-top-content: 75px;
+  --padding-bottom-content: 50px;
+  // color
+  --name-film-color: #03599d;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 html *::-webkit-scrollbar {
-    border-radius: 0;
-    width: 8px;
+  border-radius: 0;
+  width: 8px;
 }
 html *::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.15);
 }
 html *::-webkit-scrollbar-track {
-    border-radius: 0;
-    background-color: rgba(0, 0, 0, 0);
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
 }
 body {
-    font-size: 1.6rem;
-    line-height: 1.5;
-    text-rendering: optimizeSpeed;
-    overflow: overlay;
-    background-color: #f8f8f8;
-    color: rgb(90, 86, 86);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow: overlay;
+  background-color: #f8f8f8;
+  color: rgb(90, 86, 86);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    line-height: 22px;
-    font-family: "Oswald", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 22px;
+  font-family: "Oswald", sans-serif;
 }
 
 // fix empty right space react-slick
 .slick-next {
-    right: 10px !important;
-    z-index: 1000 !important;
+  right: 10px !important;
+  z-index: 1000 !important;
 }
 .slick-prev {
-    left: 10px !important;
-    z-index: 1000 !important;
+  left: 10px !important;
+  z-index: 1000 !important;
 }
 
 // icon close not css focus
 .ant-modal-close {
-    outline: none !important;
-    border: none !important;
+  outline: none !important;
+  border: none !important;
 }
 // font-weight
 .text-bold {
-    font-weight: 500;
+  font-weight: 500;
 }
 a {
-    color: rgb(90, 86, 86);
+  color: rgb(90, 86, 86);
+}
+.foo {
+  margin: 0px;
 }

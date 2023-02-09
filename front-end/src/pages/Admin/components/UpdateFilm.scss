@@ -1,118 +1,146 @@
 .wrapper-update-film {
+  display: flex;
+  width: var(--width-content-admin);
+  flex-direction: column;
+  .header-update-film {
+    font-size: 24px;
+    position: relative;
+    margin: 20px 0;
+  }
+  .header-update-film::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 92%;
+    height: 1px;
+    background: #ccc;
+    border-radius: 9999px;
+    bottom: -12px;
+  }
+  .content-update-film {
     display: flex;
-    width: var(--width-content-admin);
-    flex-direction: column;
-    .header-update-film {
-        font-size: 24px;
-        position: relative;
-        margin: 20px 0;
-    }
-    .header-update-film::after {
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    .movie-item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 600px;
+      width: 287px;
+      padding: 0 24px 24px 24px;
+      .remove-icon {
         position: absolute;
-        content: "";
-        display: block;
-        width: 92%;
-        height: 1px;
-        background: #ccc;
-        border-radius: 9999px;
-        bottom: -12px;
-    }
-    .content-update-film {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
+        width: 30px;
+        height: 30px;
+        top: 0px;
+        right: 12px;
+        cursor: pointer;
+      }
+      .info-movie {
         width: 100%;
-        .movie-item {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 600px;
-            width: 287px;
-            padding: 0 24px 24px 24px;
-            .remove-icon {
-                position: absolute;
-                width: 30px;
-                height: 30px;
-                top: 0px;
-                right: 12px;
-                cursor: pointer;
-            }
-            .info-movie {
-                width: 100%;
-                flex-direction: column;
-                text-align: left;
-                .detail {
-                    display: flex;
-                    .options {
-                        font-weight: 500;
-                        font-size: 16px;
-                    }
-                    div {
-                        margin-left: 4px;
-                    }
-                }
-                .title-movie {
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    text-align: center;
-                    min-height: 44px;
-                    font-size: 22px;
-                    font-weight: 500;
-                    color: #337ab7;
-                    cursor: pointer;
-                    margin: 12px 0;
-                    div {
-                        line-height: 1.1;
-                    }
-                }
-                .title-movie:hover {
-                    text-decoration: underline;
-                }
-            }
-            .buy-ticket {
-                margin-top: 12px;
-                .btn-update {
-                    width: 100%;
-                    border: none;
-                    outline: none;
-                    background-image: linear-gradient(
-                        to right,
-                        #0a64a7 0%,
-                        #258dcf 51%,
-                        #3db1f3 100%
-                    ) !important;
-                    color: #fff;
-                    width: 227.5px;
-                    height: 36px;
-                    cursor: pointer;
-                    border-radius: 6px;
+        flex-direction: column;
+        text-align: left;
+        .detail {
+          display: flex;
+          .options {
+            font-weight: 500;
+            font-size: 16px;
+          }
+          div {
+            margin-left: 4px;
+          }
+        }
+        .title-movie {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          min-height: 44px;
+          font-size: 22px;
+          font-weight: 500;
+          color: #337ab7;
+          cursor: pointer;
+          margin: 12px 0;
+          div {
+            line-height: 1.1;
+          }
+        }
+        .title-movie:hover {
+          text-decoration: underline;
+        }
+      }
+      .buy-ticket {
+        margin-top: 12px;
+        .btn-update {
+          width: 100%;
+          border: none;
+          outline: none;
+          background-image: linear-gradient(
+            to right,
+            #0a64a7 0%,
+            #258dcf 51%,
+            #3db1f3 100%
+          ) !important;
+          color: #fff;
+          width: 227.5px;
+          height: 36px;
+          cursor: pointer;
+          border-radius: 6px;
 
-                    font-weight: 500;
-                    span {
-                        font-size: 16px;
-                    }
-                }
-            }
+          font-weight: 500;
+          span {
+            font-size: 16px;
+          }
         }
-        .film-not-data {
-            height: 400px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            img {
-                width: 100px;
-                height: 100px;
-            }
-            span {
-                font-size: 24px;
-                margin-top: 20px;
-                color: #635d5d;
-            }
-        }
+      }
     }
+    .film-not-data {
+      height: 400px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100px;
+        height: 100px;
+      }
+      span {
+        font-size: 24px;
+        margin-top: 20px;
+        color: #635d5d;
+      }
+    }
+  }
+}
+.wrapper-content-update-film {
+  .btn-confirm {
+    width: 150px;
+    height: 40px;
+    border-radius: 12px;
+    position: absolute;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(
+      to right,
+      #0a64a7 0%,
+      #258dcf 51%,
+      #3db1f3 100%
+    ) !important;
+    font-size: 18px;
+  }
+  .group-btn {
+    display: flex;
+    flex-direction: column;
+  }
+  .btn-back {
+    font-size: 18px;
+    margin-right: 12px;
+    width: 150px;
+    height: 40px;
+    border-radius: 12px;
+  }
 }

@@ -160,14 +160,11 @@ export const deleteRequest = (
   url = "",
   params = {},
   successCallback,
-  errorCallback,
-  headers = {},
-  timeout
+  errorCallback
 ) => {
   return axios
-    .delete(url, params, {
-      headers,
-      timeout,
+    .delete(url, {
+      params,
     })
     .then((response) => {
       if (successCallback) {

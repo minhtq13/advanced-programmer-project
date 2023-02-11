@@ -2,6 +2,6 @@
 # Project Advanced Programmer : Cinema Management 
 ## Backend: Java + Spring Framework.
 ## Frontend : HTML, CSS, Javascript + ReactJS.
-## Database : MySQL.
+## Database : PostgreSQL.
 ## Tools : IntelliJ IDEA, Visual Studio Code, MySQL Workbench , Postman.
 

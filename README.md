@@ -3,5 +3,5 @@
 ## Backend: Java + Spring Framework.
 ## Frontend : HTML, CSS, Javascript + ReactJS.
 ## Database : PostgreSQL.
-## Tools : IntelliJ IDEA, Visual Studio Code, MySQL Workbench , Postman.
+## Tools : IntelliJ IDEA, Visual Studio Code, PostgreSQL Workbench , Postman.
 

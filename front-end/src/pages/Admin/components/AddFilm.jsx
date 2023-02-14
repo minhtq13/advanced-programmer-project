@@ -10,18 +10,13 @@ import {
   // Upload,
 } from "antd";
 import useFilm from "../../../hooks/useFilm";
+import { convertDate } from "../../../utils/tools";
 import "./AddFilm.scss";
 
 const { TextArea } = Input;
 const AddFilm = () => {
   const { addFilm } = useFilm();
   const onFinish = (values) => {
-    const convertDay = values?.premiereDate?._d.toLocaleDateString().split("/");
-    const newDay =
-      convertDay[0]?.length === 1 ? "0" + convertDay[0] : convertDay[0];
-    const newMonth =
-      convertDay[1]?.length === 1 ? "0" + convertDay[1] : convertDay[1];
-    const newDate = [newDay, newMonth, convertDay[2]];
     addFilm({
       name: values.name,
       nameFilm: values.nameFilm,
@@ -35,7 +30,7 @@ const AddFilm = () => {
       director: values.director,
       actor: values.actor,
       language: values.language,
-      premiereDate: newDate.join("/"),
+      premiereDate: convertDate(values),
       description: values.description,
     });
   };

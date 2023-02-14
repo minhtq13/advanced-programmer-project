@@ -24,36 +24,28 @@ const Schedule = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentCinema]);
-
   useEffect(() => {
-    if (datePlay)
+    if (datePlay && currentCinema) {
       getInfoSchedule({
         nameCinema: currentCinema,
         day: datePlay,
       });
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [datePlay, currentCinema]);
+
   const allDay = [...new Set(infoScheduleByNameCinema.map((day) => day.day))];
 
-  const listObjOfDay = [];
-  for (let i = 0; i < allDay.length; i++) {
-    listObjOfDay.push({
-      date: allDay[i].charAt(0),
-      month: allDay[i].charAt(2),
-      dayOfWeek: allDay[i].substring(4),
-    });
-  }
-
-  listObjOfDay.sort((a, b) => {
-    if (a.month === b.month) {
-      return a.date - b.date;
-    } else {
-      return a.month - b.month;
-    }
-  });
-  for (let i = 0; i < listObjOfDay.length; i++) {
-    listObjOfDay[i]["id"] = i;
-  }
+  const listObjOfDay = allDay
+    .map((day, index) => ({
+      id: index,
+      date: day.charAt(0),
+      month: day.charAt(2),
+      dayOfWeek: day.substring(4),
+    }))
+    .sort((a, b) =>
+      a.month === b.month ? a.date - b.date : a.month - b.month
+    );
 
   return (
     <div className="schedule-page">

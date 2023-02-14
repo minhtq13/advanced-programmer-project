@@ -21,3 +21,11 @@ export const convertNameCinema = (currentCinema) => {
       return "Beta Thanh Xuân";
   }
 };
+export const convertDate = (values) => {
+  const convertDay = values?.premiereDate?._d.toLocaleDateString().split("/");
+  const [day, month, year] = convertDay;
+  const newDay = day.length === 1 ? `0${day}` : day;
+  const newMonth = month.length === 1 ? `0${month}` : month;
+  const newDate = [newDay, newMonth, year].join("/");
+  return newDate;
+};

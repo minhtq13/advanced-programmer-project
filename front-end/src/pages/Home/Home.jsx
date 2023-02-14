@@ -2,8 +2,8 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import antManBanner from "../../asset/images/ant-man-banner.jpg";
 import AvatarBanner from "../../asset/images/film-avatar-banner.jpg";
-import MuRomBanner from "../../asset/images/murombanner.png";
 import OPBanner from "../../asset/images/OPBanner.jpg";
 import Movie from "../Movie";
 import "./Home.scss";
@@ -35,7 +35,7 @@ export default function Homepage() {
               <div className="promotion-box">
                 <div className="promotion__review-box">
                   <div className="box-item">
-                    <img className="box-item-img" src={MuRomBanner} alt="" />
+                    <img className="box-item-img" src={antManBanner} alt="" />
                   </div>
                 </div>
               </div>

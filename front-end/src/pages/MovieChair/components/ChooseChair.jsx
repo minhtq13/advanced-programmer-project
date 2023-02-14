@@ -141,9 +141,9 @@ const ChooseChair = () => {
             <div className="text-bold">Ghế VIP</div>
           </div>
           <div className="money">
-            {listChairsClicked.length > 0
+            {/* {listChairsClicked.length > 0
               ? `${listChairsClicked.length}x${convertToVND(50000)}`
-              : ""}
+              : ""} */}
           </div>
         </div>
         <div className="total-money">
